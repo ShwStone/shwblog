@@ -1,10 +1,11 @@
 ---
 title: YY的GCD
 date: 2022-07-13 16:22:55
-tags:
+updated: 2022-07-18 16:35:55
+tags: null
 categories:
-- 信奥
-- 题解
+  - 信奥
+  - 题解
 ---
 ## 根本写不出莫反
 题目传送门：[Link](https://www.luogu.com.cn/problem/P2257)
