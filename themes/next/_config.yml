@@ -419,7 +419,7 @@ font:
   enable: false
 
   # Uri of fonts host, e.g. https://fonts.googleapis.com (Default).
-  host:
+  host: fonts.useco.com
 
   # Font options:
   # `external: true` will load this font family from `host` above.
@@ -1019,3 +1019,21 @@ sitemap:
   path: sitemap.xml
 baidusitemap:
   path: baidusitemap.xml
+
+needmoreshare2:
+  enable: true
+  postbottom:
+    enable: true
+    options: 
+    iconStyle: default
+    boxForm: horizontal
+    position: bottomCenter
+    networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
+  float:
+    enable: true
+    options: 
+    iconStyle: default
+    boxForm: horizontal
+    position: bottomCenter
+    networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
+      
