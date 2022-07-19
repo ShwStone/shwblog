@@ -102,10 +102,6 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-- type: git
-  repo: git@github.com:ShwStone/shwstone.github.io.git
-  branch: main
-  message: hexo
 
 markdown:
   plugins:
