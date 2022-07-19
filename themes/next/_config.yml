@@ -274,7 +274,7 @@ reward_settings:
   #comment: Donate comment here.
 
 reward:
-  wechatpay: /images/wechatpay.png
+  wechatpay: /images/weixin.jpg
   #alipay: /images/alipay.png
   #paypal: /images/paypal.png
   #bitcoin: /images/bitcoin.png
