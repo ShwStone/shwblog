@@ -118,3 +118,28 @@ markdown:
 
 netlify_cms:
   config_file: netlify.yaml
+
+uglify:
+  mangle: true
+  # 这儿不能为空，为空会导致 js 文件压缩
+  # output:
+  # compress:
+  exclude:
+    - '*.min.js'
+  es6: false
+
+clean_css:
+  exclude: 
+    - '*.min.css'
+
+html_minifier:  
+  collapseBooleanAttributes: true
+  collapseWhitespace: true
+  # Ignore '<!-- more -->' https://hexo.io/docs/tag-plugins#Post-Excerpt
+  ignoreCustomComments: [ !!js/regexp /^\s*more/]
+  removeComments: true
+  removeEmptyAttributes: true
+  removeScriptTypeAttributes: true
+  removeStyleLinkTypeAttributes: true
+  minifyJS: true
+  minifyCSS: true
