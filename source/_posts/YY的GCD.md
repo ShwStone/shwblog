@@ -5,6 +5,8 @@ tags:
 categories:
 - 信奥
 - 题解
+comments: true
+top: 2
 ---
 ## 根本写不出莫反
 题目传送门：[Link](https://www.luogu.com.cn/problem/P2257)

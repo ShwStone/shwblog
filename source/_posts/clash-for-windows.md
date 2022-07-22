@@ -2,6 +2,8 @@
 title: clash-for-windows
 date: 2022-07-13 16:47:41
 tags: 
+comments: true
+top: 2
 ---
 [点此下载Windows](https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.19.23/Clash.for.Windows.Setup.0.19.23.exe)
 

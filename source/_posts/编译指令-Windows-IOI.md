@@ -4,6 +4,8 @@ date: 2022-07-13 16:23:12
 tags:
 categories:
 - 信奥
+comments: true
+top: 2
 ---
 非常适合各种IOI赛制自行编译运行。  
 告别IDE！我爱编辑器！  

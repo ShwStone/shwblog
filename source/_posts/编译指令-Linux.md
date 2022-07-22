@@ -4,6 +4,8 @@ date: 2022-07-13 16:25:07
 tags:
 categories:
 - 信奥
+comments: true
+top: 2
 ---
 注意 `~/.run` 文件夹可能需要手动新建。  
 `mkdir ~/.run`

@@ -2,6 +2,8 @@
 title: github加速
 date: 2022-07-13 16:57:20
 tags: 
+comments: true
+top: 2
 ---
 如果没有梯子，GitHub的下载简直就是噩梦。
 
