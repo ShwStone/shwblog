@@ -143,3 +143,7 @@ neat_js:
    - '**/*.min.js'
    - '**/jquery.fancybox.pack.js'
    - '**/index.js'
+
+index_generator_plus:
+  path: ''
+  per_page: 10
