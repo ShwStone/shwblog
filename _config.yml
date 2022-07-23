@@ -63,7 +63,9 @@ prismjs:
 index_generator:
   path: ''
   per_page: 10
-  order_by: -top
+  order_by:
+  -top
+  -updated
 
 # Category & Tag
 default_category: uncategorized
