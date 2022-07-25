@@ -2,6 +2,7 @@
 # Theme Core Configuration Settings
 # See: https://theme-next.org/docs/theme-settings/
 # ---------------------------------------------------------------
+
 # If false, merge configs from `_data/next.yml` into default configuration (rewrite).
 # If true, will fully override default configuration by options from `_data/next.yml` (override). Only for NexT settings.
 # And if true, all config from default NexT `_config.yml` have to be copied into `next.yml`. Use if you know what you are doing.
@@ -86,8 +87,8 @@ footer:
 # CC licenses are available in 39 languages, you can find the specific and correct abbreviation you need on https://creativecommons.org
 creative_commons:
   license: by-nc-sa
-  sidebar: true
-  post: true
+  sidebar: false
+  post: false
   language:
 
 
@@ -96,8 +97,8 @@ creative_commons:
 # ---------------------------------------------------------------
 
 # Schemes
-#scheme: Muse
-scheme: Mist
+scheme: Muse
+#scheme: Mist
 #scheme: Pisces
 #scheme: Gemini
 
@@ -116,12 +117,12 @@ darkmode: false
 # External url should start with http:// or https://
 menu:
   home: / || fa fa-home
-  about: /about/ || fa fa-user
-  tags: /tags/ || fa fa-tags
-  categories: /categories/ || fa fa-th
+  #about: /about/ || fa fa-user
+  #tags: /tags/ || fa fa-tags
+  #categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
   #schedule: /schedule/ || fa fa-calendar
-  # sitemap: /sitemap.xml || fa fa-sitemap
+  #sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404/ || fa fa-heartbeat
 
 # Enable / Disable menu icons / item badges.
@@ -162,11 +163,11 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: /images/head.jpg
+  url: #/images/avatar.gif
   # If true, the avatar will be dispalyed in circle.
-  rounded: true
+  rounded: false
   # If true, the avatar will be rotated with the cursor.
-  rotated: true
+  rotated: false
 
 # Posts / Categories / Tags in sidebar.
 site_state: true
@@ -176,8 +177,8 @@ site_state: true
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
-  GitHub: https://github.com/ShwStone || fab fa-github
-  E-Mail: HaowenShi@outlook.com || fa fa-envelope
+  #GitHub: https://github.com/yourname || fab fa-github
+  #E-Mail: mailto:yourname@gmail.com || fa fa-envelope
   #Weibo: https://weibo.com/yourname || fab fa-weibo
   #Google: https://plus.google.com/yourname || fab fa-google
   #Twitter: https://twitter.com/yourname || fab fa-twitter
@@ -186,10 +187,9 @@ social:
   #YouTube: https://youtube.com/yourname || fab fa-youtube
   #Instagram: https://instagram.com/yourname || fab fa-instagram
   #Skype: skype:yourname?call|chat || fab fa-skype
-  Luogu: https://www.luogu.com.cn/user/491204
 
 social_icons:
-  enable: false
+  enable: true
   icons_only: false
   transition: false
 
@@ -201,14 +201,7 @@ links_settings:
   layout: block
 
 links:
-  CmsMartin: https://www.luogu.com.cn/user/461426
-  CmsBlog: http://cmsblog.top/
-  juruo999: https://www.luogu.com.cn/user/371818
-  juruo999's Blog: https://codewasp942.github.io/
-  陈玉彬: https://www.luogu.com.cn/user/333119
-  CybBlog: https://www.luogu.com.cn/blog/cyb1010/
-  _Fontainebleau_: https://www.luogu.com.cn/user/181775
-  LJC001151's Blog: https://www.luogu.com.cn/blog/181775/
+  #Title: http://yoursite.com
 
 # Table of Contents in the Sidebar
 # Front-matter variable (unsupport wrap expand_all).
@@ -268,12 +261,12 @@ tag_icon: false
 # Front-matter variable (unsupport animation).
 reward_settings:
   # If true, reward will be displayed in every article by default.
-  enable: true
+  enable: false
   animation: false
-  comment: "如果阅读本篇文章需要付费，你愿意为此支付1块钱吗？"
+  #comment: Donate comment here.
 
 reward:
-  wechatpay: /images/weixin.jpg
+  #wechatpay: /images/wechatpay.png
   #alipay: /images/alipay.png
   #paypal: /images/paypal.png
   #bitcoin: /images/bitcoin.png
@@ -364,22 +357,22 @@ codeblock:
   highlight_theme: normal
   # Add copy button on codeblock
   copy_button:
-    enable: true
+    enable: false
     # Show text copy result.
-    show_result: true
+    show_result: false
     # Available values: default | flat | mac
     style:
 
 back2top:
   enable: true
   # Back to top in sidebar.
-  sidebar: true
+  sidebar: false
   # Scroll percent label in b2t button.
-  scrollpercent: true
+  scrollpercent: false
 
 # Reading progress bar
 reading_progress:
-  enable: true
+  enable: false
   # Available values: top | bottom
   position: top
   color: "#37c6c0"
@@ -396,9 +389,9 @@ bookmark:
 
 # `Follow me on GitHub` banner in the top-right corner.
 github_banner:
-  enable: true
-  permalink: https://github.com/ShwStone
-  title: Fork me on GitHub
+  enable: false
+  permalink: https://github.com/yourname
+  title: Follow me on GitHub
 
 
 # ---------------------------------------------------------------
@@ -418,7 +411,7 @@ font:
   enable: false
 
   # Uri of fonts host, e.g. https://fonts.googleapis.com (Default).
-  host: fonts.useco.com
+  host:
 
   # Font options:
   # `external: true` will load this font family from `host` above.
@@ -485,7 +478,7 @@ yandex_site_verification:
 baidu_site_verification:
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO.
-baidu_push: true
+baidu_push: false
 
 
 # ---------------------------------------------------------------
@@ -503,13 +496,13 @@ math:
   # Default (true) will load mathjax / katex script on demand.
   # That is it only render those page which has `mathjax: true` in Front-matter.
   # If you set it to false, it will load mathjax / katex srcipt EVERY PAGE.
-  per_page: false
+  per_page: true
 
   # hexo-renderer-pandoc (or hexo-renderer-kramed) required for full MathJax support.
   mathjax:
-    enable: true
+    enable: false
     # See: https://mhchem.github.io/MathJax-mhchem/
-    mhchem: true
+    mhchem: false
 
   # hexo-renderer-markdown-it-plus (or hexo-renderer-markdown-it with markdown-it-katex plugin) required for full Katex support.
   katex:
@@ -585,15 +578,6 @@ comments:
     #  order: -1
     #gitalk:
     #  order: -2
-
-# Demo: https://utteranc.es/  http://trumandu.github.io/about/
-utteranc:
-  enable: true
-  repo: ShwStone/comments #Github repo such as :TrumanDu/comments
-  pathname: pathname
-  # theme: github-light,github-dark,github-dark-orange
-  theme: github-light
-  cdn: https://utteranc.es/client.js
 
 # Disqus
 disqus:
@@ -727,7 +711,7 @@ firestore:
 # Show Views / Visitors of the website / page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi
 busuanzi_count:
-  enable: true
+  enable: false
   total_visitors: true
   total_visitors_icon: fa fa-user
   total_views: true
@@ -755,7 +739,7 @@ algolia_search:
 # Local Search
 # Dependencies: https://github.com/theme-next/hexo-generator-searchdb
 local_search:
-  enable: true
+  enable: false
   # If auto, trigger search by changing input.
   # If manual, trigger search by pressing enter key or search button.
   trigger: auto
@@ -1011,40 +995,3 @@ vendors:
 css: css
 js: js
 images: images
-
-since: 2022
-
-sitemap:
-  path: sitemap.xml
-baidusitemap:
-  path: baidusitemap.xml
-
-# NeedMoreShare2
-# Dependencies: https://github.com/theme-next/theme-next-needmoreshare2
-# For more information: https://github.com/revir/need-more-share2
-# iconStyle: default | box
-# boxForm: horizontal | vertical
-# position: top / middle / bottom + Left / Center / Right
-# networks:
-# Weibo | Wechat | Douban | QQZone | Twitter | Facebook | Linkedin | Mailto | Reddit | Delicious | StumbleUpon | Pinterest
-# GooglePlus | Tumblr | GoogleBookmarks | Newsvine | Evernote | Friendfeed | Vkontakte | Odnoklassniki | Mailru
-needmoreshare:
-  enable: true
-  cdn:
-    js: //cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js
-    css: //cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css
-  postbottom:
-    enable: true
-    options:
-      iconStyle: box
-      boxForm: horizontal
-      position: bottomCenter
-      networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
-  float:
-    enable: false
-    options:
-      iconStyle: box
-      boxForm: horizontal
-      position: middleRight
-      networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
-
