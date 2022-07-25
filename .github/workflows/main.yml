@@ -13,8 +13,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v1
 
-      - name: install pandoc
-        run: apt install pandoc
+      - name: enable pandoc
+        uses: docker://pandoc/core:2.9
 
       - name: Use Node.js 16.x
         uses: actions/setup-node@v1
