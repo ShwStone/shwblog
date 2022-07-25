@@ -18,8 +18,12 @@ jobs:
         with:
           node-version: 16.x
       - run: npm install
-      - uses: docker://pandoc
-      - run: npm run build --if-present
+      - name: Install Pandoc
+        run: curl -s -L https://github.com/jgm/pandoc/releases/download/2.9.2/pandoc-2.9.2-linux-amd64.tar.gz | tar xvzf - -C $RUNNER_TOOL_CACHE/
+      - name: Hexo Generate
+        run: |
+          export PATH="$PATH:$RUNNER_TOOL_CACHE/pandoc-2.9.2/bin"
+          npm run build --if-present
 
       - name: Deploy to netlify
         uses: netlify/actions/cli@master
