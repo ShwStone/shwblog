@@ -201,12 +201,12 @@ links_settings:
   layout: block
 
 links:
-  CmsMartin: https://www.luogu.com.cn/user/461426  
-  CmsBlog: http://cmsblog.top/ 
-  juruo999: https://www.luogu.com.cn/user/371818 
-  juruo999's Blog: https://codewasp942.github.io/  
-  陈玉彬: https://www.luogu.com.cn/user/333119  
-  CybBlog: https://www.luogu.com.cn/blog/cyb1010/  
+  CmsMartin: https://www.luogu.com.cn/user/461426
+  CmsBlog: http://cmsblog.top/
+  juruo999: https://www.luogu.com.cn/user/371818
+  juruo999's Blog: https://codewasp942.github.io/
+  陈玉彬: https://www.luogu.com.cn/user/333119
+  CybBlog: https://www.luogu.com.cn/blog/cyb1010/
   _Fontainebleau_: https://www.luogu.com.cn/user/181775
   LJC001151's Blog: https://www.luogu.com.cn/blog/181775/
 
@@ -270,7 +270,7 @@ reward_settings:
   # If true, reward will be displayed in every article by default.
   enable: true
   animation: false
-  #comment: Donate comment here.
+  comment: "如果阅读本篇文章需要付费，你愿意为此支付1块钱吗？"
 
 reward:
   wechatpay: /images/weixin.jpg
@@ -485,7 +485,7 @@ yandex_site_verification:
 baidu_site_verification:
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO.
-baidu_push: false
+baidu_push: true
 
 
 # ---------------------------------------------------------------
@@ -1019,17 +1019,29 @@ sitemap:
 baidusitemap:
   path: baidusitemap.xml
 
-needmoreshare2:
+# NeedMoreShare2
+# Dependencies: https://github.com/theme-next/theme-next-needmoreshare2
+# For more information: https://github.com/revir/need-more-share2
+# iconStyle: default | box
+# boxForm: horizontal | vertical
+# position: top / middle / bottom + Left / Center / Right
+# networks:
+# Weibo | Wechat | Douban | QQZone | Twitter | Facebook | Linkedin | Mailto | Reddit | Delicious | StumbleUpon | Pinterest
+# GooglePlus | Tumblr | GoogleBookmarks | Newsvine | Evernote | Friendfeed | Vkontakte | Odnoklassniki | Mailru
+needmoreshare:
   enable: true
+  cdn:
+    js: //cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js
+    css: //cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css
   postbottom:
-    enable: true #开启底部分享按钮
+    enable: true
     options:
       iconStyle: box
       boxForm: horizontal
       position: bottomCenter
       networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
   float:
-    enable: true #左侧分享开启
+    enable: false
     options:
       iconStyle: box
       boxForm: horizontal
