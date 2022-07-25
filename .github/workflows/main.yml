@@ -13,14 +13,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v1
 
-      - name: enable pandoc
-        uses: docker://pandoc/core:2.9
-
       - name: Use Node.js 16.x
         uses: actions/setup-node@v1
         with:
           node-version: 16.x
       - run: npm install
+      - uses: docker://pandoc
       - run: npm run build --if-present
 
       - name: Deploy to netlify
