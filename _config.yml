@@ -433,7 +433,7 @@ theme_config:
     title: # Custom header, leave empty to use the default one
     display_in_home: false
     params:
-      maxCount: 5
+      maxCount: 3
       #PPMixingRate: 0.0
       #isDate: false
       #isImage: false
@@ -449,7 +449,6 @@ theme_config:
   # Show previous post and next post in post footer if exists
   # Available values: left | right | false
   post_navigation: left
-
 
   # ---------------------------------------------------------------
   # Custom Page Settings
@@ -508,7 +507,7 @@ theme_config:
       # Show text copy result.
       show_result: true
       # Available values: default | flat | mac
-      style:
+      style: 
 
   back2top:
     enable: true
@@ -657,50 +656,6 @@ theme_config:
       # See: https://github.com/KaTeX/KaTeX/tree/master/contrib/copy-tex
       copy_tex: false
 
-  # Easily enable fast Ajax navigation on your website.
-  # Dependencies: https://github.com/theme-next/theme-next-pjax
-  pjax: false
-
-  # FancyBox is a tool that offers a nice and elegant way to add zooming functionality for images.
-  # For more information: https://fancyapps.com/fancybox
-  fancybox: false
-
-  # A JavaScript library for zooming images like Medium.
-  # Do not enable both `fancybox` and `mediumzoom`.
-  # For more information: https://github.com/francoischalifour/medium-zoom
-  mediumzoom: false
-
-  # Vanilla JavaScript plugin for lazyloading images.
-  # For more information: https://github.com/ApoorvSaxena/lozad.js
-  lazyload: false
-
-  # Pangu Support
-  # For more information: https://github.com/vinta/pangu.js
-  pangu: false
-
-  # Quicklink Support
-  # Do not enable both `pjax` and `quicklink`.
-  # For more information: https://github.com/GoogleChromeLabs/quicklink
-  # Front-matter (unsupport home archive).
-  quicklink:
-    enable: false
-
-    # Home page and archive page can be controlled through home and archive options below.
-    # This configuration item is independent of `enable`.
-    home: false
-    archive: false
-
-    # Default (true) will initialize quicklink after the load event fires.
-    delay: true
-    # Custom a time in milliseconds by which the browser must execute prefetching.
-    timeout: 3000
-    # Default (true) will enable fetch() or falls back to XHR.
-    priority: true
-
-    # For more flexibility you can add some patterns (RegExp, Function, or Array) to ignores.
-    # See: https://github.com/GoogleChromeLabs/quicklink#custom-ignore-patterns
-    ignores:
-
 
   # ---------------------------------------------------------------
   # Comments Settings
@@ -735,134 +690,10 @@ theme_config:
     theme: github-light
     cdn: https://utteranc.es/client.js
 
-  # Disqus
-  disqus:
-    enable: false
-    shortname:
-    count: true
-    #post_meta_order: 0
-
-  # DisqusJS
-  # Alternative Disqus - Render comment component using Disqus API.
-  # Demo: https://suka.js.org/DisqusJS/
-  # For more information: https://github.com/SukkaW/DisqusJS
-  disqusjs:
-    enable: false
-    # API Endpoint of Disqus API (https://disqus.com/api/).
-    # Leave api empty if you are able to connect to Disqus API. Otherwise you need a reverse proxy for it.
-    # For example:
-    # api: https://disqus.skk.moe/disqus/
-    api:
-    apikey: # Register new application from https://disqus.com/api/applications/
-    shortname: # See: https://disqus.com/admin/settings/general/
-
-  # Changyan
-  changyan:
-    enable: false
-    appid:
-    appkey:
-    #post_meta_order: 0
-
-  # Valine
-  # For more information: https://valine.js.org, https://github.com/xCss/Valine
-  valine:
-    enable: false
-    appid: # Your leancloud application appid
-    appkey: # Your leancloud application appkey
-    notify: false # Mail notifier
-    verify: false # Verification code
-    placeholder: Just go go # Comment box placeholder
-    avatar: mm # Gravatar style
-    guest_info: nick,mail,link # Custom comment header
-    pageSize: 10 # Pagination size
-    language: # Language, available values: en, zh-cn
-    visitor: false # Article reading statistic
-    comment_count: true # If false, comment count will only be displayed in post page, not in home page
-    recordIP: false # Whether to record the commenter IP
-    serverURLs: # When the custom domain name is enabled, fill it in here (it will be detected automatically by default, no need to fill in)
-    #post_meta_order: 0
-
-  # LiveRe comments system
-  # You can get your uid from https://livere.com/insight/myCode (General web site)
-  livere_uid: # <your_uid>
-
-  # Gitalk
-  # For more information: https://gitalk.github.io, https://github.com/gitalk/gitalk
-  gitalk:
-    enable: false
-    github_id: # GitHub repo owner
-    repo: # Repository name to store issues
-    client_id: # GitHub Application Client ID
-    client_secret: # GitHub Application Client Secret
-    admin_user: # GitHub repo owner and collaborators, only these guys can initialize gitHub issues
-    distraction_free_mode: true # Facebook-like distraction free mode
-    # Gitalk's display language depends on user's browser or system environment
-    # If you want everyone visiting your site to see a uniform language, you can set a force language value
-    # Available values: en | es-ES | fr | ru | zh-CN | zh-TW
-    language:
-
-
-  # ---------------------------------------------------------------
-  # Post Widgets & Content Sharing Services
-  # See: https://theme-next.org/docs/third-party-services/post-widgets
-  # ---------------------------------------------------------------
-
-  # Star rating support to each article.
-  # To get your ID visit https://widgetpack.com
-  rating:
-    enable: false
-    id:     # <app_id>
-    color:  fc6423
-
-  # AddThis Share. See: https://www.addthis.com
-  # Go to https://www.addthis.com/dashboard to customize your tools.
-  add_this_id:
-
-
   # ---------------------------------------------------------------
   # Statistics and Analytics
   # See: https://theme-next.org/docs/third-party-services/statistics-and-analytics
   # ---------------------------------------------------------------
-
-  # Google Analytics
-  google_analytics:
-    tracking_id: # <app_id>
-    # By default, NexT will load an external gtag.js script on your site.
-    # If you only need the pageview feature, set the following option to true to get a better performance.
-    only_pageview: false
-
-  # Baidu Analytics
-  baidu_analytics: # <app_id>
-
-  # Growingio Analytics
-  growingio_analytics: # <project_id>
-
-  # CNZZ count
-  cnzz_siteid:
-
-  # Show number of visitors of each article.
-  # You can visit https://leancloud.cn to get AppID and AppKey.
-  # AppID and AppKey are recommended to be the same as valine's for counter compatibility.
-  # Do not enable both `valine.visitor` and `leancloud_visitors`.
-  leancloud_visitors:
-    enable: false
-    app_id: # <your app id>
-    app_key: # <your app key>
-    # Required for apps from CN region
-    server_url: # <your server url>
-    # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security
-    # If you don't care about security in leancloud counter and just want to use it directly
-    # (without hexo-leancloud-counter-security plugin), set `security` to `false`.
-    security: true
-
-  # Another tool to show number of visitors to each article.
-  # Visit https://console.firebase.google.com/u/0/ to get apiKey and projectId.
-  # Visit https://firebase.google.com/docs/firestore/ to get more information about firestore.
-  firestore:
-    enable: false
-    collection: articles # Required, a string collection name to access firestore database
-    apiKey: # Required
-    projectId: # Required
 
   # Show Views / Visitors of the website / page with busuanzi.
   # Get more information on http://ibruce.info/2015/04/04/busuanzi
@@ -881,17 +712,6 @@ theme_config:
   # See: https://theme-next.org/docs/third-party-services/search-services
   # ---------------------------------------------------------------
 
-  # Algolia Search
-  # For more information: https://www.algolia.com
-  algolia_search:
-    enable: false
-    hits:
-      per_page: 10
-    labels:
-      input_placeholder: Search for Posts
-      hits_empty: "We didn't find any results for the search: ${query}"
-      hits_stats: "${hits} results found in ${time} ms"
-
   # Local Search
   # Dependencies: https://github.com/theme-next/hexo-generator-searchdb
   local_search:
@@ -909,121 +729,6 @@ theme_config:
   # Swiftype Search API Key
   swiftype_key:
 
-
-  # ---------------------------------------------------------------
-  # Chat Services
-  # See: https://theme-next.org/docs/third-party-services/chat-services
-  # ---------------------------------------------------------------
-
-  # Chatra Support
-  # See: https://chatra.io
-  # Dashboard: https://app.chatra.io/settings/general
-  chatra:
-    enable: false
-    async: true
-    id: # Visit Dashboard to get your ChatraID
-    #embed: # Unfinished experimental feature for developers. See: https://chatra.io/help/api/#injectto
-
-  # Tidio Support
-  # See: https://www.tidiochat.com
-  # Dashboard: https://www.tidiochat.com/panel/dashboard
-  tidio:
-    enable: false
-    key: # Public Key, get it from dashboard. See: https://www.tidiochat.com/panel/settings/developer
-
-
-  # ---------------------------------------------------------------
-  # Tags Settings
-  # See: https://theme-next.org/docs/tag-plugins/
-  # ---------------------------------------------------------------
-
-  # Note tag (bs-callout)
-  note:
-    # Note tag style values:
-    #  - simple    bs-callout old alert style. Default.
-    #  - modern    bs-callout new (v2-v3) alert style.
-    #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
-    #  - disabled  disable all CSS styles import of note tag.
-    style: simple
-    icons: false
-    # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
-    # Offset also applied to label tag variables. This option can work with disabled note tag.
-    light_bg_offset: 0
-
-  # Tabs tag
-  tabs:
-    transition:
-      tabs: false
-      labels: true
-
-  # PDF tag
-  # NexT will try to load pdf files natively, if failed, pdf.js will be used.
-  # So, you have to install the dependency of pdf.js if you want to use pdf tag and make it available to all browsers.
-  # See: https://github.com/theme-next/theme-next-pdf
-  pdf:
-    enable: false
-    # Default height
-    height: 500px
-
-  # Mermaid tag
-  mermaid:
-    enable: false
-    # Available themes: default | dark | forest | neutral
-    theme: forest
-
-
-  # ---------------------------------------------------------------
-  # Animation Settings
-  # ---------------------------------------------------------------
-
-  # Use velocity to animate everything.
-  # For more information: http://velocityjs.org
-  motion:
-    enable: true
-    async: false
-    transition:
-      # Transition variants:
-      # fadeIn | flipXIn | flipYIn | flipBounceXIn | flipBounceYIn
-      # swoopIn | whirlIn | shrinkIn | expandIn
-      # bounceIn | bounceUpIn | bounceDownIn | bounceLeftIn | bounceRightIn
-      # slideUpIn | slideDownIn | slideLeftIn | slideRightIn
-      # slideUpBigIn | slideDownBigIn | slideLeftBigIn | slideRightBigIn
-      # perspectiveUpIn | perspectiveDownIn | perspectiveLeftIn | perspectiveRightIn
-      post_block: fadeIn
-      post_header: slideDownIn
-      post_body: slideDownIn
-      coll_header: slideLeftIn
-      # Only for Pisces | Gemini.
-      sidebar: slideUpIn
-
-  # Progress bar in the top during page loading.
-  # Dependencies: https://github.com/theme-next/theme-next-pace
-  # For more information: https://github.com/HubSpot/pace
-  pace:
-    enable: false
-    # Themes list:
-    # big-counter | bounce | barber-shop | center-atom | center-circle | center-radar | center-simple
-    # corner-indicator | fill-left | flat-top | flash | loading-bar | mac-osx | material | minimal
-    theme: minimal
-
-  # JavaScript 3D library.
-  # Dependencies: https://github.com/theme-next/theme-next-three
-  three:
-    enable: false
-    three_waves: false
-    canvas_lines: false
-    canvas_sphere: false
-
-  # Canvas-ribbon
-  # Dependencies: https://github.com/theme-next/theme-next-canvas-ribbon
-  # For more information: https://github.com/zproo/canvas-ribbon
-  canvas_ribbon:
-    enable: false
-    size: 300 # The width of the ribbon
-    alpha: 0.6 # The transparency of the ribbon
-    zIndex: -1 # The display level of the ribbon
-
-
   #! ---------------------------------------------------------------
   #! DO NOT EDIT THE FOLLOWING SETTINGS
   #! UNLESS YOU KNOW WHAT YOU ARE DOING
@@ -1037,115 +742,14 @@ theme_config:
     # Internal path prefix.
     _internal: lib
 
-    # Internal version: 3.1.0
-    # anime: //cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js
-    anime:
-
     # Internal version: 5.13.0
     # fontawesome: //cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css
     # fontawesome: //cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css
     fontawesome:
 
     # MathJax
-    # mathjax: //cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-    mathjax:
-
-    # KaTeX
-    # katex: //cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css
-    # katex: //cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css
-    # copy_tex_js: //cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.js
-    # copy_tex_css: //cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.css
-    katex:
-    copy_tex_js:
-    copy_tex_css:
-
-    # Internal version: 0.2.8
-    # pjax: //cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js
-    pjax:
-
-    # FancyBox
-    # jquery: //cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js
-    # fancybox: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js
-    # fancybox_css: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css
-    jquery:
-    fancybox:
-    fancybox_css:
-
-    # Medium-zoom
-    # mediumzoom: //cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js
-    mediumzoom:
-
-    # Lazyload
-    # lazyload: //cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js
-    # lazyload: //cdnjs.cloudflare.com/ajax/libs/lozad.js/1.14.0/lozad.min.js
-    lazyload:
-
-    # Pangu
-    # pangu: //cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js
-    # pangu: //cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js
-    pangu:
-
-    # Quicklink
-    # quicklink: //cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js
-    quicklink:
-
-    # DisqusJS
-    # disqusjs_js: //cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js
-    # disqusjs_css: //cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css
-    disqusjs_js:
-    disqusjs_css:
-
-    # Valine
-    # valine: //cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js
-    # valine: //cdnjs.cloudflare.com/ajax/libs/valine/1.3.10/Valine.min.js
-    valine:
-
-    # Gitalk
-    # gitalk_js: //cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js
-    # gitalk_css: //cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css
-    gitalk_js:
-    gitalk_css:
-
-    # Algolia Search
-    # algolia_search: //cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js
-    # instant_search: //cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js
-    algolia_search:
-    instant_search:
-
-    # Mermaid
-    # mermaid: //cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js
-    # mermaid: //cdnjs.cloudflare.com/ajax/libs/mermaid/8.4.8/mermaid.min.js
-    mermaid:
-
-    # Internal version: 1.2.1
-    # velocity: //cdn.jsdelivr.net/npm/velocity-animate@1/velocity.min.js
-    # velocity: //cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.min.js
-    # velocity_ui: //cdn.jsdelivr.net/npm/velocity-animate@1/velocity.ui.min.js
-    # velocity_ui: //cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.ui.min.js
-    velocity:
-    velocity_ui:
-
-    # Internal version: 1.0.2
-    # pace: //cdn.jsdelivr.net/npm/pace-js@1/pace.min.js
-    # pace: //cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js
-    # pace_css: //cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.css
-    # pace_css: //cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-minimal.min.css
-    pace:
-    pace_css:
-
-    # Internal version: 1.0.0
-    # three: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/three.min.js
-    # three_waves: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/three-waves.min.js
-    # canvas_lines: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/canvas_lines.min.js
-    # canvas_sphere: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/canvas_sphere.min.js
-    three:
-    three_waves:
-    canvas_lines:
-    canvas_sphere:
-
-    # Internal version: 1.0.0
-    # canvas_ribbon: //cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-ribbon@1/canvas-ribbon.js
-    canvas_ribbon:
+    mathjax: //cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    #mathjax:
 
   # Assets
   css: css
@@ -1179,7 +783,7 @@ theme_config:
         iconStyle: box
         boxForm: horizontal
         position: bottomCenter
-        networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
+        networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook，
     float:
       enable: false
       options:
