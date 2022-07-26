@@ -754,7 +754,7 @@ PS：如果windows无法执行chmod的话，把构建指令改为 `npm install &
 #### 安装
 
 ```sh
-npm install netlify-CMS-app --save
+npm install netlify-cms-app --save
 ```
 
 #### 配置
@@ -784,8 +784,8 @@ pages:
 # through hexo config over fields
 over_format: true
 scripts:
-  - js/CMS/youtube.js
-  - js/CMS/img.js
+  - js/cms/youtube.js
+  - js/cms/img.js
 
 # A list of collections the CMS should be able to edit
 collections:
