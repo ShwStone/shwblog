@@ -1,0 +1,138 @@
+{
+  "main": {
+    "id": "6d8f27f8cac78318",
+    "type": "split",
+    "children": [
+      {
+        "id": "53f8dd49e88b9dcc",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "_posts/2022高考全国卷甲卷作文.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c188576fe27175f8",
+    "type": "split",
+    "children": [
+      {
+        "id": "663e74a9a418e440",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c6da283364769ef6",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "10bd28989e1cc3d2",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "85efd87ea570405c",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "602b3d57d9ab1158",
+    "type": "split",
+    "children": [
+      {
+        "id": "6ade2fb5b1d82c8c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3a06cc2c525426ac",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "_posts/2022高考全国卷甲卷作文.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "62e50e5eed5bcfb5",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "_posts/2022高考全国卷甲卷作文.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f9eb6b9e9db3f9c8",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "71bbc187d5f024a4",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "_posts/2022高考全国卷甲卷作文.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "53f8dd49e88b9dcc",
+  "lastOpenFiles": [
+    "_posts/生成函数.md",
+    "_posts/CSP-RP.md",
+    "_posts/hexo-next搭建博客（github转netlify）.md",
+    "_posts/2021-10-5-pm.md"
+  ]
+}
