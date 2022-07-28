@@ -8,7 +8,7 @@ categories:
 comments: true
 top: 2
 ---
-原题链接：[Link]()
+原题链接：[Link](https://www.luogu.com.cn/problem/P7193)
 
 ## 题目描述
 
