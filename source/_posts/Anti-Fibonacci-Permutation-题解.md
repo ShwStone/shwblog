@@ -1,5 +1,5 @@
 ---
-title: Anti-Fibonacci Permutation
+title: Anti-Fibonacci Permutation 题解
 date: 2022-07-13 16:21:27
 tags:
 categories:
@@ -8,8 +8,10 @@ categories:
 comments: true
 top: 2
 ---
+原题链接：[Link](https://www.luogu.com.cn/problem/CF1644B)  
+
 ## 题目简介
-**[Link](https://www.luogu.com.cn/problem/CF1644B)**  
+
 简单来说，如果在一个序列 $A$ 中，对于每一个 $i > 2$ ，都有 $A_i \ne A_{i-1}+A_{i-2}$ ，那么 $A$ 被称为反斐波那契数列。就是不符合斐波那契数列要求的数列。题目要求构造出 $n$ 个这样的数列，每一个数都要在 $1 \sim n$ 之间。
 
 <!-- more -->
@@ -21,6 +23,9 @@ top: 2
 时间复杂度 $O(n)$ 。
 
 ## AC代码
+
+{% spoiler code %}
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -48,3 +53,5 @@ int main() {
 	return 0;
 }
 ```
+
+{% endspoiler %}

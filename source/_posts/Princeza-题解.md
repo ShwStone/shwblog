@@ -1,5 +1,5 @@
 ---
-title: Princeza
+title: Princeza-题解
 date: 2022-07-13 16:23:41
 tags:
 categories:
@@ -8,7 +8,9 @@ categories:
 comments: true
 top: 2
 ---
-### 题目描述
+原题链接：[Link]()
+
+## 题目描述
 
 Luka（女司机）把卡车停在湖边。Barica，Luka 知道她亲吻Barica，她会变成一个美丽的公主。但是，她需要先抓住她！
 
@@ -28,14 +30,17 @@ Barica选择四个方向之一，然后沿所选方向跳到该方向的第一�
 
 Barica跳完这一步之后，原来位置的植物将立马消失了。知道植物的位置和 Barica 选择的方向顺序后，Luka 希望确定Barica 最终将停留的植物的坐标。Luka 将在Barica最终的位置等她，亲吻她。编写一个解决Luka 问题的程序，并帮助她变成美丽的公主。
 
-### 思路分析
+## 思路分析
+
 显然，Barica只能沿着对角线方向跳。
 
 但直接沿着对角线枚举太慢了，所以，对于每个节点，我们维护四个指针，指向其左上、右上、左下、右下的点，这样就可以在 $\Theta (n)$ 的复杂度模拟。
 
 但为了建立这个图，我们需要 $\Theta (nlogn)$ 进行排序。
 
-### AC代码
+## AC代码
+
+{% spoiler code %}
 
 ```cpp
 #include <bits/stdc++.h>
@@ -115,3 +120,5 @@ int main() {
     return 0;
 }
 ```
+
+{% endspoiler %}

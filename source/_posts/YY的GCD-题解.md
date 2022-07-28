@@ -1,5 +1,5 @@
 ---
-title: YY的GCD
+title: YY的GCD-题解
 date: 2022-07-13 16:22:55
 tags:
 categories:
@@ -8,17 +8,23 @@ categories:
 comments: true
 top: 2
 ---
-## 根本写不出莫反
+
 题目传送门：[Link](https://www.luogu.com.cn/problem/P2257)
+
+## 题面描述
 
 <!-- more -->
 
+## 思路
+
 由于本蒟蒻实在是看不懂如下过程：
 
-$$\sum_{k \in prime}{ \sum_{d=1}^{\lfloor \frac{n}{k} \rfloor}{\mu (d) * \lfloor \frac{n}{T} \rfloor * \lfloor \frac{m}{T} \rfloor}}$$  
-$$= \sum_{T=1}^{n}{\lfloor \frac{n}{T} \rfloor * \lfloor \frac{m}{T} \rfloor \sum_{k|T,k \in prime}{\mu(\frac{T}{k})}}$$  
-
-~~上来LeTax就直接爆炸~~
+$$
+\begin{gather*}
+\sum_{k \in prime}{ \sum_{d=1}^{\lfloor \frac{n}{k} \rfloor}{\mu (d) * \lfloor \frac{n}{T} \rfloor * \lfloor \frac{m}{T} \rfloor}}\\
+= \sum_{T=1}^{n}{\lfloor \frac{n}{T} \rfloor * \lfloor \frac{m}{T} \rfloor \sum_{k|T,k \in prime}{\mu(\frac{T}{k})}}
+\end{gather*}
+$$
 
 更看不出来后面那一坨东西是怎么预处理的，所以我决定~~跟着题解~~自己推一推柿子。（感谢大佬 [@凄魉的题解](https://www.luogu.com.cn/blog/qlwpc/solutin-p2257) ，这里再修缮一下数学上的纰漏，易于理解。）
 
@@ -48,8 +54,12 @@ $$\sum_{d|n}{f(d)=[n \in prime]}$$
 
 设 $f'(n)=[n \in prime]$ ,则有：
 
-$$\sum_{d|n}{f(d)=f'(n)}$$  
-$$f(n) + \sum_{d|n,d \neq n}{f(d)}=f'(n)$$  
+$$
+\begin{gather*}
+\sum_{d|n}{f(d)=f'(n)}\\
+f(n) + \sum_{d|n,d \neq n}{f(d)}=f'(n)
+\end{gather*}
+$$
 
 所以得到 $f(n)$ 的递推式：  
 
@@ -82,26 +92,22 @@ for (int i = 1; i <= n; i++) {
 
 然后来看一看原题怎么求：
 
-$$Ans=\sum_{i=1}^n{\sum_{j=1}^m{[gcd(i,j) \in prime]}}$$
-$$Ans=\sum_{i=1}^n{\sum_{j=1}^m{\sum_{d|gcd(i,j)}{f(d)}}}$$
-$$Ans=\sum_{i=1}^n{\sum_{j=1}^m{\sum_{d|i,d|j}{f(d)}}}$$
-$$Ans=\sum_{d=1}{\sum_{i=1}^n{[d|i]\sum_{j=1}^m{[d|j]f(d)}}}$$
-$$Ans=\sum_{d=1}{\sum_{i=1}^{\lfloor \frac{n}{d} \rfloor}{\sum_{j=1}^{\lfloor \frac{m}{d} \rfloor}{f(d)}}}$$
-$$Ans=\sum_{d=1}{\lfloor \frac{n}{d} \rfloor \lfloor \frac{m}{d} \rfloor f(d)}$$
+$$
+\begin{gather*}
+Ans=\sum_{i=1}^n{\sum_{j=1}^m{[gcd(i,j) \in prime]}}\\
+=\sum_{i=1}^n{\sum_{j=1}^m{\sum_{d|gcd(i,j)}{f(d)}}}\\
+=\sum_{i=1}^n{\sum_{j=1}^m{\sum_{d|i,d|j}{f(d)}}}\\
+=\sum_{d=1}{\sum_{i=1}^n{[d|i]\sum_{j=1}^m{[d|j]f(d)}}}\\
+=\sum_{d=1}{\sum_{i=1}^{\lfloor \frac{n}{d} \rfloor}{\sum_{j=1}^{\lfloor \frac{m}{d} \rfloor}{f(d)}}}\\
+=\sum_{d=1}{\lfloor \frac{n}{d} \rfloor \lfloor \frac{m}{d} \rfloor f(d)}
+\end{gather*}
+$$
 
 简直不要太简洁。
 
 再看一看 $d$ 的上限：
 
 $$Ans=\sum_{d=1}^{min(n,m)}{\lfloor \frac{n}{d} \rfloor \lfloor \frac{m}{d} \rfloor f(d)}$$
-
-最后贴上代码：
-
-```cpp
-\\ 咕咕咕
-```
-
-
 
 
 
