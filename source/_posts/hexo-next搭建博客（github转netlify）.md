@@ -210,11 +210,11 @@ hexo new #postname
 hexo new "postname"
 ```
 
-hexo的文章开头存储了一些yaml信息，用 `---` 表示开头结尾。这些信息被称为 `font-matter` ，记录了文章的标题、日期等，文章的属性都在 `font-matter` 上。
+hexo的文章开头存储了一些yaml信息，用 `---` 表示开头结尾。这些信息被称为 `front-matter` ，记录了文章的标题、日期等，文章的属性都在 `front-matter` 上。
 
 ### 新建页面
 
-hexo支持建立一些页面，同时也支持对文章进行分类和标签，分类和标签信息都存储在 `font-matter` 中。
+hexo支持建立一些页面，同时也支持对文章进行分类和标签，分类和标签信息都存储在 `front-matter` 中。
 
 #### 分类和标签
 
@@ -239,7 +239,7 @@ tags: #标签
 hexo new page categories && hexo new page tags
 ```
 
-此时在 `source` 文件夹下就会多出categories文件夹和tags文件夹。文件夹中有一个 `index.md` 。打开markdown，在 `font-matter` 中分别加入 `type: "categories"` 和 `type: "tags"` 。正文留空。就完成了构建。
+此时在 `source` 文件夹下就会多出categories文件夹和tags文件夹。文件夹中有一个 `index.md` 。打开markdown，在 `front-matter` 中分别加入 `type: "categories"` 和 `type: "tags"` 。正文留空。就完成了构建。
 
 #### 关于
 
@@ -280,7 +280,7 @@ index_generator_plus:
   per_page: 10
 ```
 
-无需其他改动，只要在 `font-matter` 中加入 `top: #你的值` 就可以排序。top越大越靠前。
+无需其他改动，只要在 `front-matter` 中加入 `top: #你的值` 就可以排序。top越大越靠前。
 
 #### spoiler
 
@@ -554,7 +554,7 @@ next支持mathjax和katex。一般来说katex渲染快，而且next也支持了�
       copy_tex: false
 ```
 
-`per_page` 配置是否对每篇文章开启渲染。逻辑比较奇怪， `false` 反而是开启渲染（网上好多文章都说是 `true` ,害得我踩了好几遍坑）。建议开启，不然每篇文章开头都要加上 `font-matter` ： `mathjax: true` 。
+`per_page` 配置是否对每篇文章开启渲染。逻辑比较奇怪， `false` 反而是开启渲染（网上好多文章都说是 `true` ,害得我踩了好几遍坑）。建议开启，不然每篇文章开头都要加上 `front-matter` ： `mathjax: true` 。
 
 想要启用mathjax,还需：
 
