@@ -1,6 +1,7 @@
 ---
 title: hexo+next搭建博客（github转netlify）
 date: 2022-07-26 08:49:54
+updated: 2022-07-26 08:49:54
 tags: 博客
 categories:
 - hexo

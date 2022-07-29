@@ -2,4 +2,4 @@
 while read line
 do
     cp $line -f
-done < prebuild/file
+done < prebuild/copy_file
