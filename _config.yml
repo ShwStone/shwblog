@@ -290,14 +290,14 @@ theme_config:
     #  - always  expand for all pages automatically.
     #  - hide    expand only when click on the sidebar toggle icon.
     #  - remove  totally remove sidebar including sidebar toggle.
-    display: post
+    display: hide
 
     # Sidebar padding in pixels.
     padding: 18
     # Sidebar offset from top menubar in pixels (only for Pisces | Gemini).
     offset: 12
     # Enable sidebar on narrow view (only for Muse | Mist).
-    onmobile: false
+    onmobile: true
 
   # Sidebar Avatar
   avatar:
