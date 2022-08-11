@@ -1,14 +1,16 @@
 ---
 title: static不能乱用
+date: 2022-08-11 11:04:31
+tags: null
+categories: null
 comments: true
 top: 2
-date: 2022-08-11 11:04:31
 updateDate: 2022-08-11 11:04:31
-tags:
-categories:
 ---
 
 ---
+
+<!--more-->
 
 我以前只知道 `static` 关键字可以让变量读取变快，但是实际上对 `static` 的滥用会导致极为严重的后果。
 
