@@ -28,7 +28,7 @@ auto_generator:
     # 如果你有多个Post文件夹，在这里定义多个，见https://github.com/jiangtj/blog/blob/master/netlify-cms.yaml
     all_posts:
       # 设置为false，关闭默认的Post
-      #enabled: true
+      enabled: false
       label: "Post"
       folder: "source/_posts"
       create: true
