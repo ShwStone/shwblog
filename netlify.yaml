@@ -23,6 +23,27 @@ scripts:
   - js/cms/youtube.js
   - js/cms/img.js
 
+auto_generator:
+  post: 
+    # 如果你有多个Post文件夹，在这里定义多个，见https://github.com/jiangtj/blog/blob/master/netlify-cms.yaml
+    all_posts:
+      # 设置为false，关闭默认的Post
+      #enabled: true
+      label: "Post"
+      folder: "source/_posts"
+      create: true
+      editor:
+        preview: true
+  # Page生成配置
+  page: 
+    enabled: true
+    config:
+      label: "Page"
+      # 默认禁止删除Page文件
+      delete: false
+      editor:
+        preview: true
+
 # A list of collections the CMS should be able to edit
 collections:
   # Used in routes, ie.: /admin/collections/:slug/edit
