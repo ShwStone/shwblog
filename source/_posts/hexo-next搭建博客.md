@@ -752,6 +752,10 @@ PS：如果 windows 无法执行 chmod 的话，把构建指令改为 `npm insta
 
 如果还有别的文件要更改，复制到 `prebuild` 文件夹并且在 `file` 中添加就行了。
 
+### 百度验证
+
+百度站长平台要求你验证自己的网站，可以通过往 `</head>` 标签之前插入一个 `<meta name="baidu-site-verification" content="***" />` 来完成。 netlify 支持在网站 html 中注入代码：进入 netlify.app ，选择 site-settings ，找到 build & deploy 中的 Snippet injection ，选择在 `</head>` 或 `</body>` 标签前加入代码。
+
 ### CMS
 
 接下来我们来看后台的使用。
