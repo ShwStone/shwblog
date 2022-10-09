@@ -1,23 +1,25 @@
 ---
-title: hexo+next搭建博客（github转netlify）
+title: hexo+next搭建博客
 date: 2022-07-26 08:49:54
 updateDate: 2022-07-26 08:49:54
 tags: 博客
 categories:
-- hexo
+  - hexo
 comments: true
 top: 2
 ---
 
 本站的搭建经历了很多的步骤，现记录如下，写一个备忘，也是帮助其他人。
 
+
+
 <!--more-->
 
 ## hexo+github
 
-首先是hexo的使用。先前我了解过github pages的使用，原理很简单：github对每一个项目都可以建立一个page，前提是代码仓库的根目录上至少要有一个 `index.html` 。生成的page放在域名 `username.github.io/repositoryname` 上。当 `repositoryname` 和 `username` 相同的时候，域名简化成 `username.github.io` ，很适合建立个人博客。这样的博客都是静态的，也就是说，网站的所有文件都是生成好的，直接上传到github即可。
+首先是 hexo 的使用。先前我了解过 github pages 的使用，原理很简单： github 对每一个项目都可以建立一个 page ，前提是代码仓库的根目录上至少要有一个 `index.html` 。生成的 page 放在域名 `username.github.io/repositoryname` 上。当 `repositoryname` 和 `username` 相同的时候，域名简化成 `username.github.io` ，很适合建立个人博客。这样的博客都是静态的，也就是说，网站的所有文件都是生成好的，直接上传到 github 即可。
 
-那么怎么生成网站的静态文件呢？使用hexo、 `hugo` 等静态网站生成器就可以完成。生成完的网站文件在 `public` 目录下，将 `public` 目录上传到github即可。
+那么怎么生成网站的静态文件呢？使用 hexo 、 hugo 等静态网站生成器就可以完成。生成完的网站文件在 `public` 目录下，将 `public` 目录上传到 github 即可。
 
 ### hexo
 
@@ -27,7 +29,7 @@ top: 2
 
 #### 安装
 
-hexo要由node.js的软件包管理器npm安装。此外hexo依赖于git,所以要现安装node.js和git。
+hexo 要由 node.js 的软件包管理器 npm 安装。此外 hexo 依赖于 git ,所以要现安装 node.js 和 git 。
 
 ```sh
 yay -S nodejs git
@@ -41,7 +43,7 @@ yay -S nodejs git
 - [git](https://git-scm.com/downloads)
 - [nodejs](https://nodejs.org/zh-cn/)
 
-然后使用npm安装hexo：
+然后使用 npm 安装 hexo ：
 
 ```sh
 sudo npm install -g hexo-cli
@@ -55,7 +57,7 @@ sudo npm install -g hexo-cli
 cd ~; hexo init Blog; cd Blog; npm install
 ```
 
-ok。现在hexo已经可以使用。默认有一篇文章 `helloworld` 。注意：如果hexo一篇文章都没有，则无法生成网站。
+ok。现在 hexo 已经可以使用。默认有一篇文章 `helloworld` 。注意：如果 hexo 一篇文章都没有，则无法生成网站。
 
 此时网站的目录如下：
 
@@ -72,7 +74,7 @@ ok。现在hexo已经可以使用。默认有一篇文章 `helloworld` 。注意
 
 `_config.yml` 是配置网站的地方， `source` 里面存储的都是网站的文章，其中 `_posts` 的内容会被编译成html, `_drafts` 目录会被忽略，而其他文件会原样复制到网站的根目录。 `themes` 文件夹里存储了主题文件。下文说的next主题就要放在这里。
 
-在开始配置之前，先来试一试吧！你将看到默认主题landscape下的helloworld文章。
+在开始配置之前，先来试一试吧！你将看到默认主题 landscape 下的 helloworld 文章。
 
 ```sh
 hexo clean && hexo s
