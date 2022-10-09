@@ -9,9 +9,11 @@ comments: true
 top: 2
 ---
 
+前情提要：不花一分钱搭建一个**带有后台**的个人 Blog 。
+
+分为两个部分：1. 用 github 和 hexo 搭建不带后台的博客。 2. 迁移到 netlify 上，加入后台。
+
 本站的搭建经历了很多的步骤，现记录如下，写一个备忘，也是帮助其他人。
-
-
 
 <!--more-->
 
@@ -72,7 +74,7 @@ ok。现在 hexo 已经可以使用。默认有一篇文章 `helloworld` 。注�
 └── themes
 ```
 
-`_config.yml` 是配置网站的地方， `source` 里面存储的都是网站的文章，其中 `_posts` 的内容会被编译成html, `_drafts` 目录会被忽略，而其他文件会原样复制到网站的根目录。 `themes` 文件夹里存储了主题文件。下文说的next主题就要放在这里。
+`_config.yml` 是配置网站的地方， `source` 里面存储的都是网站的文章，其中 `_posts` 的内容会被编译成 html , `_drafts` 目录会被忽略，而其他文件会原样复制到网站的根目录。 `themes` 文件夹里存储了主题文件。下文说的 next 主题就要放在这里。
 
 在开始配置之前，先来试一试吧！你将看到默认主题 landscape 下的 helloworld 文章。
 
@@ -80,7 +82,7 @@ ok。现在 hexo 已经可以使用。默认有一篇文章 `helloworld` 。注�
 hexo clean && hexo s
 ```
 
-这将会在你的计算机上运行一个网站实例，一般来说会在 `localhost:4000` 。这意味着跟你在同一局域网的人就可以访问这个网站。如果4000端口被占用，你也可以选择其他端口：
+这将会在你的计算机上运行一个网站实例，一般来说会在 `localhost:4000` 。这意味着跟你在同一局域网的人就可以访问这个网站。如果 4000 端口被占用，你也可以选择其他端口：
 
 ```sh
 hexo clean && hexo s -p 1234
@@ -138,7 +140,7 @@ hexo clean && hexo g
 git push git@github.com:username/username.github.io --set-upstream main -f
 ```
 
-这里前提是要配置好ssh-key。操作也很简单：
+这里前提是要配置好 ssh-key 。操作也很简单：
 
 ```sh
 ssh-keygen -t rsa -b 4096
@@ -168,13 +170,13 @@ ssh-keygen -t rsa -b 4096
 cat ~/.ssh/id_rsa.pub
 ```
 
-将文件内容复制后，打开github个人settings-ssh，添加公钥，将复制内容粘贴进去。
+将文件内容复制后，打开 github “个人settings”-“ssh” ，添加公钥，将复制内容粘贴进去。
 
-那么打开username.github.io的仓库配置，settings-pages,选择打开pages（默认应该是打开的），再打开网站 `username.github.io` 就可以看到刚刚生成的网址了。
+那么打开 username.github.io 的仓库配置，settings-pages ,选择打开 pages （默认应该是打开的），再打开网站 `username.github.io` 就可以看到刚刚生成的网址了。
 
 #### 自动化
 
-但是这么做还是太low了。hexo有一个功能deploy，可以将已经生成好的 `public` 文件夹自动上传，不过需要我们配置一下。
+但是这么做还是太 low 了。 hexo 有一个功能 deploy ，可以将已经生成好的 `public` 文件夹自动上传，不过需要我们配置一下。
 
 安装插件 `hexo-deployer-git`
 
@@ -201,27 +203,27 @@ hexo clean && hexo d -g # or hexo g -d
 
 ### 新建文章
 
-hexo新建文章最好使用命令：
+hexo 新建文章最好使用命令：
 
 ```sh
 hexo new #postname
 ```
 
-文章无需后缀名，自动使用markdown后缀。如果题目中有空格或特殊字符，加上双引号：
+文章无需后缀名，自动使用 `.md` 后缀。如果题目中有空格或特殊字符，加上双引号：
 
 ```sh
 hexo new "postname"
 ```
 
-hexo的文章开头存储了一些yaml信息，用 `---` 表示开头结尾。这些信息被称为 `front-matter` ，记录了文章的标题、日期等，文章的属性都在 `front-matter` 上。
+hexo 的文章开头存储了一些 yaml 信息，用 `---` 表示开头结尾。这些信息被称为 `front-matter` ，记录了文章的标题、日期等，文章的属性都在 `front-matter` 上。
 
 ### 新建页面
 
-hexo支持建立一些页面，同时也支持对文章进行分类和标签，分类和标签信息都存储在 `front-matter` 中。
+hexo 支持建立一些页面，同时也支持对文章进行分类和标签，分类和标签信息都存储在 `front-matter` 中。
 
 #### 分类和标签
 
-在hexo中，分类和标签不是一个东西。他们的形式很像：
+在 hexo 中，分类和标签不是一个东西。他们的形式很像：
 
 ```yaml
 categories: #分类
@@ -234,19 +236,19 @@ tags: #标签
 #...
 ```
 
-但是他们的含义不一样。categories表示文章属于category1类别中的category2类别，而tags表示文章既是tag1标签，又是tag2标签。可以看到categories是有严格父子关系的，而tags是并列的。
+但是他们的含义不一样。 categories 表示文章属于 category1 类别中的 category2 类别，而 tags 表示文章既是 tag1 标签，又是 tag2 标签。可以看到 categories 是有严格父子关系的，而 tags 是并列的。
 
-如果希望读者能够通过分类和标签索引文章，需要新建categories页面和tags页面：
+如果希望读者能够通过分类和标签索引文章，需要新建 categories 页面和tags页面：
 
 ```sh
 hexo new page categories && hexo new page tags
 ```
 
-此时在 `source` 文件夹下就会多出categories文件夹和tags文件夹。文件夹中有一个 `index.md` 。打开markdown，在 `front-matter` 中分别加入 `type: "categories"` 和 `type: "tags"` 。正文留空。就完成了构建。
+此时在 `source` 文件夹下就会多出 categories 文件夹和 tags 文件夹。文件夹中有一个 `index.md` 。打开 markdown ，在 `front-matter` 中分别加入 `type: "categories"` 和 `type: "tags"` 。正文留空。就完成了构建。
 
 #### 关于
 
-同理，新建about页面。
+同理，新建 about 页面。
 
 ```sh
 hexo new page about
@@ -268,7 +270,7 @@ hexo new page about
 
 #### 文章排序
 
-hexo默认的排序是根据发布日期。有时我们会希望将文章置顶或按照update日期排序，可以利用一个插件实现：
+hexo 默认的排序是根据发布日期。有时我们会希望将文章置顶或按照 update 日期排序，可以利用一个插件实现：
 
 ```sh
 npm uninstall hexo-generator-index --save
@@ -283,11 +285,11 @@ index_generator_plus:
   per_page: 10
 ```
 
-无需其他改动，只要在 `front-matter` 中加入 `top: #你的值` 就可以排序。top越大越靠前。
+无需其他改动，只要在 `front-matter` 中加入 `top: #你的值` 就可以排序。 top 越大越靠前。
 
 #### spoiler
 
-编程向的Blog难免会有大量代码，这时如果直接放着就很丑。可以利用 `hexo-sliding-spoiler` 实现折叠代码，而且js效果还算不错。
+编程向的 Blog 难免会有大量代码，这时如果直接放着就很丑。可以利用 `hexo-sliding-spoiler` 实现折叠代码，而且 js 效果还算不错。
 
 用法如下：
 
@@ -317,16 +319,16 @@ int main() {
 npm install hexo-sliding-spoiler --save
 ```
 
-bug修复：
-spoiler内容默认超过一定长度就会隐藏。打开 `node_modules/hexo-sliding-spoiler/assets/spoiler.css` 编辑 `.spoiler.expanded .spoiler-content` 中的 `overflow` 选项，改为 `auto` ，就会出现滚轮滑动来查看。
+bug 修复：
+spoiler 内容默认超过一定长度就会隐藏。打开 `node_modules/hexo-sliding-spoiler/assets/spoiler.css` 编辑 `.spoiler.expanded .spoiler-content` 中的 `overflow` 选项，改为 `auto` ，就会出现滚轮滑动来查看。
 
 #### mathjax
 
-这与主题next相关，因此放到next中去讲。
+这与主题 next 相关，因此放到 next 中去讲。
 
 #### sitemap
 
-sitemap可以用来向百度和谷歌等搜索引擎推荐自己的站点。使用方法也简单：
+sitemap 可以用来向百度和谷歌等搜索引擎推荐自己的站点。使用方法也简单：
 
 ```sh
 npm install hexo-generator-sitemap hexo-generator-baidusitemap --save
@@ -334,11 +336,11 @@ npm install hexo-generator-sitemap hexo-generator-baidusitemap --save
 
 这样网站的根目录下就有 `sitemap.txt` 、 `sitemap.xml` 和 `baidusitemap.xml` 可供提交。
 
-更多插件在next中讲解。
+更多插件在 next 中讲解。
 
 ## next
 
-next是一个~~我觉得~~挺好看并且插件多，社区活跃的主题。
+next 是一个~~我觉得~~挺好看并且插件多，社区活跃的主题。
 
 ### 安装
 
@@ -355,17 +357,17 @@ cd themes/next
 git pull
 ```
 
-但是为了能这样做，我们就需要把next的配置文件迁出来。next也有一个配置文件 `themes/next/_config.yml` ，将里面的内容复制出来，粘贴到站点的 `_config.yml` ，然后将所有复制的文本前面加上两个空格的缩进（选中之后调整缩进长度为2,按下tab键），再在开头顶格输入 `theme_config:` 。接下来所有操作都在 `theme_config:` 中进行，不修改 `themes/next/_config.yml` 。
+但是为了能这样做，我们就需要把 next 的配置文件迁出来。 next 也有一个配置文件 `themes/next/_config.yml` ，将里面的内容复制出来，粘贴到站点的 `_config.yml` ，然后将所有复制的文本前面加上两个空格的缩进（选中之后调整缩进长度为2,按下tab键），再在开头顶格输入 `theme_config:` 。接下来所有操作都在 `theme_config:` 中进行，不修改 `themes/next/_config.yml` 。
 
 ### 配置
 
-接下来我们看一看next的配置：
+接下来我们看一看 next 的配置：
 
 PS：以下配置内容如没有就新建。
 
 #### 主题
 
-next默认有4中主题可选。找到 `Schemes` ：
+next 默认有4中主题可选。找到 `Schemes` ：
 
 ```yaml
 # Schemes
@@ -375,7 +377,7 @@ scheme: Muse
 #scheme: Gemini
 ```
 
-默认主题是Muse，可以逐个试一试。
+默认主题是 Muse ，可以逐个试一试。
 
 #### 页面
 
@@ -535,7 +537,7 @@ scheme: Muse
 
 找到字段 `math` ：
 
-next支持mathjax和katex。一般来说katex渲染快，而且next也支持了复制katex源码，但是在mathjax3之后，katex和mathjax速度差不多，而mathjax支持更多样的复制和多种渲染选项，而且支持更多语法，再加之化学方程式的支持，我最终选择了mathjax。
+next 支持 mathjax 和 katex 。一般来说 katex 渲染快，而且 next 也支持了复制 katex 源码，但是在 mathjax3 之后， katex 和 mathjax 速度差不多，而 mathjax 支持更多样的复制和多种渲染选项，而且支持更多语法，再加之化学方程式的支持，我最终选择了 mathjax 。
 
 ```yaml
   math:
@@ -559,7 +561,7 @@ next支持mathjax和katex。一般来说katex渲染快，而且next也支持了�
 
 `per_page` 配置是否对每篇文章开启渲染。逻辑比较奇怪， `false` 反而是开启渲染（网上好多文章都说是 `true` ,害得我踩了好几遍坑）。建议开启，不然每篇文章开头都要加上 `front-matter` ： `mathjax: true` 。
 
-想要启用mathjax,还需：
+想要启用 mathjax ,还需：
 
 ```sh
 npm uninstall hexo-renderer-marked --save
@@ -577,7 +579,7 @@ yay -S pandoc
 
 #### 评论
 
-使用[utteranc](https://utteranc.es/)。去官网注册一个账号，绑定一个空的github仓库（比如叫comments），然后在配置文件里新建字段如下：
+使用[utteranc](https://utteranc.es/)。去官网注册一个账号，绑定一个空的 github 仓库（比如叫comments），然后在配置文件里新建字段如下：
 
 ```yaml
   # Demo: https://utteranc.es/  http://trumandu.github.io/about/
@@ -684,29 +686,29 @@ npm install hexo-next-share
 
 ## netlify
 
-github站虽好，但是一来访问慢，二来不能被百度爬到。所以我决定迁移到netlify。
+github 站虽好，但是一来访问慢，二来不能被百度爬到。所以我决定迁移到 [netlify](https://netlify.app/) 。
 
-这是一个提供免费的（基础服务免费）网页托管，持续部署的网站，CDN也很快，非常适合我们使用。而且netlify还有CMS（后台）系统，可以在线修改你的文章，原来必须要服务器+域名才能完成的事，被我们免费做到，岂不是爽歪歪？
+这是一个提供免费的（基础服务免费）网页托管，持续部署的网站， CDN 也很快，非常适合我们使用。而且 netlify 还有 CMS （后台）系统，可以在线修改你的文章，原来必须要服务器+域名才能完成的事，被我们免费做到，岂不是爽歪歪？
 
 ### 建站
 
-netlify提供自动部署服务，如果想要用他的CMS,就不能只把 `public` 文件夹传上去了，我们要把整个Blog文件夹都传上去。
+netlify 提供自动部署服务，如果想要用他的 CMS ,就不能只把 `public` 文件夹传上去了，我们要把整个 Blog 文件夹都传上去。
 
-在github上新建一个代码仓库Blog，然后把本地文件夹传上去：
+在 github 上新建一个代码仓库 Blog ，然后把本地文件夹传上去：
 
 ```sh
 git init && git add -A && git commit -a -m "init" && git push git@github.com:username/Blog.git
 ```
 
-随后在[netlify](https://netlify.app/)中选择用github登陆。新建一个站点，选择绑定到github仓库，选择刚刚新建的Blog仓库。在站点的构建命令中填写 `npm install && npm build` ，发布目录填 `public` 。
+随后在[netlify](https://netlify.app/)中选择用 github 登陆。新建一个站点，选择绑定到 github 仓库，选择刚刚新建的Blog仓库。在站点的构建命令中填写 `npm install && npm build` ，发布目录填 `public` 。
 
-然后netlify会自动帮你运行部署，相当与我们在本地运行 `hexo g` ，然后通过 `public` 文件夹访问站点。不过这一切都是由netlify的机器来做的。在站点配置中你可以更改自己网站的名字，任意选取吧！
+然后 netlify 会自动帮你运行部署，相当与我们在本地运行 `hexo g` ，然后通过 `public` 文件夹访问站点。不过这一切都是由 netlify 的机器来做的。在站点配置中你可以更改自己网站的名字，任意选取吧！
 
-这个东西他有个好处，就是对于小型博客部署时间短。因为netlify会将你部署所需的环境、插件作为缓存存起来，不需要每次都安装，而不像github的CI，每次都要装依赖，甚至pandoc都要重装一遍。所以虽然netlify只有300分钟一个月的构建时间，但是绝对够用。
+这个东西他有个好处，就是对于小型博客部署时间短。因为 netlify 会将你部署所需的环境、插件作为缓存存起来，不需要每次都安装，而不像 github 的 CI ，每次都要装依赖，甚至 pandoc 都要重装一遍。所以虽然 netlify 只有 300 分钟一个月的构建时间，但是绝对够用。
 
-如果不够用了可以考虑关闭netlify的自动部署，然后在Blog仓库中启用Action，配置构建指令并部署到netlify。这样子就会有2000分钟的构建时间，但每次部署都要多花1分多钟。不过这样还是可以使用CMS的。
+如果不够用了可以考虑关闭 netlify 的自动部署，然后在 Blog 仓库中启用 Action ，配置构建指令并部署到 netlify 。这样子就会有2000分钟的构建时间，但每次部署都要多花1分多钟。不过这样还是可以使用CMS的。
 
-既然已经迁移到了netlify，我们可以让原来的github page重定向到netlify，避免流量流失。将github page的仓库的内容全部删除，添加 `index.html` ：
+既然已经迁移到了 netlify ，我们可以让原来的 github page重定向到 netlify ，避免流量流失。将 github page 的仓库的内容全部删除，添加 `index.html` ：
 
 ```html
 <html>
@@ -742,11 +744,11 @@ do
 done < prebuild/file
 ```
 
-push到github上。
+push 到 github 上。
 
-最后在netlify的构建指令中加上一条，改为 `npm install && ./prebuild.sh && npm run build` 。
+最后在 netlify 的构建指令中加上一条，改为 `npm install && ./prebuild.sh && npm run build` 。
 
-PS：如果windows无法执行chmod的话，把构建指令改为 `npm install && /bin/sh ./prebuild.sh && npm run build`
+PS：如果 windows 无法执行 chmod 的话，把构建指令改为 `npm install && /bin/sh ./prebuild.sh && npm run build`
 
 如果还有别的文件要更改，复制到 `prebuild` 文件夹并且在 `file` 中添加就行了。
 
@@ -762,7 +764,25 @@ npm install netlify-cms-app --save
 
 #### 配置
 
-在根目录新建 `netlify.yaml` ：
+进入 netlify.app ，选择 site-settings ，找到 build & deploy 中的 Snippet injection ，在 `</body>` 标签前加入：
+
+```html
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+<!--netlify cms 有一个小 bug ，登录时需要手动刷新。这是自动刷新的代码-->
+```
+
+然后去 github 上，在根目录新建 `netlify.yaml` ：
 
 ```yaml
 backend:
@@ -790,6 +810,27 @@ scripts:
   - js/cms/youtube.js
   - js/cms/img.js
 
+auto_generator:
+  post: 
+    # 如果你有多个Post文件夹，在这里定义多个，见https://github.com/jiangtj/blog/blob/master/netlify-cms.yaml
+    all_posts:
+      # 设置为false，关闭默认的Post
+      enabled: false
+      label: "Post"
+      folder: "source/_posts"
+      create: true
+      editor:
+        preview: true
+  # Page生成配置
+  page: 
+    enabled: true
+    config:
+      label: "Page"
+      # 默认禁止删除Page文件
+      delete: false
+      editor:
+        preview: true
+
 # A list of collections the CMS should be able to edit
 collections:
   # Used in routes, ie.: /admin/collections/:slug/edit
@@ -804,7 +845,7 @@ collections:
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm:ss", required: false}
-      - {label: "Updeted Date", name: "updated", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss", required: false}
+      - {label: "Update Date", name: "updateDate", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm:ss", required: false}
       - {label: "Tags", name: "tags", widget: "list", required: false}
       - {label: "Categories", name: "categories", widget: "list", required: false}
       - {label: "Body", name: "body", widget: "markdown", required: false}
@@ -814,10 +855,10 @@ collections:
 
 注意 `backend` 中的 `branch` 要与你的实际分支相匹配。
 
-然后在netlify中找到site-settings-identity，找到git-gateway，点击启用，选择Blog仓库。
+然后在 netlify 中找到 site-settings-identity ，找到 git-gateway ，点击启用，选择 Blog 仓库。
 
 这样你就可以在 `你的网址/admin` 中看到登陆界面了。
 
-自己注册一个admin账户，然后在identity中关闭注册，只允许邀请，保证安全。
+自己注册一个 admin 账户，然后在 identity 中关闭注册，只允许邀请，保证安全。
 
-ok。尽情享受netlify CMS吧！
+ok 。尽情享受 netlify CMS 吧！
