@@ -1,7 +1,7 @@
 ---
 title: hexo+next搭建博客
 date: 2022-07-26 08:49:54
-updateDate: 2022-07-26 08:49:54
+updateDate: 2022-10-10 08:49:54
 tags: 博客
 categories:
   - hexo
@@ -866,3 +866,7 @@ collections:
 自己注册一个 admin 账户，然后在 identity 中关闭注册，只允许邀请，保证安全。
 
 ok 。尽情享受 netlify CMS 吧！
+
+### To do
+
+Netlify CMS 不支持 latex ，并且 bug 较多，我以后有时间可能会把 Luogu 的 Markdown*Palettes 嵌入到 netlify 的 markdown 编辑器里，自己做一个小部件，或者哪位大佬帮我写一下吧 qwq 。
