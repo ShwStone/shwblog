@@ -748,7 +748,7 @@ theme_config:
     fontawesome:
 
     # MathJax
-    mathjax: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js
+    mathjax: https://cdn.bootcss.com/mathjax/3.0.5/es5/tex-mml-chtml.js
     #mathjax:
 
   # Assets
