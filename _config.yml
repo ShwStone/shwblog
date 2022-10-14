@@ -748,7 +748,7 @@ theme_config:
     fontawesome:
 
     # MathJax
-    mathjax: https://shwstone.netlify.app/images/tex-mml-chtml.js
+    mathjax: https://cdn.bootcss.com/mathjax/3.0.0/latest.js?config=TeX-AMS-MML_HTMLorMML
     #mathjax:
 
   # Assets
