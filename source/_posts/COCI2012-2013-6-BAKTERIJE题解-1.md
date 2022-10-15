@@ -1,17 +1,19 @@
 ---
 title: COCI2012-2013#6 BAKTERIJE题解
+date: 2022-10-06 07:35:32
+updateDate: 2022-10-15 16:56:04
+tags:
+  - 信奥
+  - 题解
+categories:
+  - 信奥
+  - 题解
 comments: true
 top: 2
-date: 2022-10-06 07:35:32
-updateDate: 2022-10-06 07:35:32
-tags: 
-- 信奥
-- 题解
-categories: 
-- 信奥
-- 题解
 ---
 [Link](https://www.luogu.com.cn/problem/P4621)
+
+<!--more-->
 
 ## 题目分析
 
