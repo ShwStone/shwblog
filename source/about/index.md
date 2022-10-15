@@ -13,8 +13,4 @@ date: 2022-07-14 15:57:07
 好吧，说正经的。
 蒟蒻学生一枚。OIer。Linux爱好者~~（看不出来哈）~~。
 
-[GitHub](https://shwstone.github.io/)上百度搜不到，所以在[Netlify](https://shwstone.netlify.app/)上另设一站，完全同步。
-
-PS：Netlify的同步反而比GitHub快。
-
 有事请联系邮箱： `HaowenShi@outlook.com` ，或写在本页的评论区。
