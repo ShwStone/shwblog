@@ -748,7 +748,7 @@ theme_config:
     fontawesome:
 
     # MathJax
-    mathjax: https://cdn.bootcss.com/mathjax/3.2.2/es5/tex-mml-chtml.js
+    mathjax: https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/startup.js
     #mathjax:
 
   # Assets
@@ -783,7 +783,7 @@ theme_config:
         iconStyle: box
         boxForm: horizontal
         position: bottomCenter
-        networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook，
+        networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
     float:
       enable: false
       options:
