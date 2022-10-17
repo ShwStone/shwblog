@@ -98,11 +98,11 @@ for (long long i = 0; i <= mst; i++) {
 
 $$
 \begin{cases}
-x \equiv a[1].pas_0\ \ or\ \ a[1].pas_1\ \ or\ \ a[1].pas_2\ \ or\ \ a[1].pas_3 \pmod {a[1].stp}\\
-x \equiv a[2].pas_0\ \ or\ \ a[2].pas_1\ \ or\ \ a[2].pas_2\ \ or\ \ a[2].pas_3 \pmod {a[2].stp}\\
-x \equiv a[3].pas_0\ \ or\ \ a[3].pas_1\ \ or\ \ a[3].pas_2\ \ or\ \ a[3].pas_3 \pmod {a[3].stp}\\
-x \equiv a[4].pas_0\ \ or\ \ a[4].pas_1\ \ or\ \ a[4].pas_2\ \ or\ \ a[4].pas_3 \pmod {a[4].stp}\\
-x \equiv a[5].pas_0\ \ or\ \ a[5].pas_1\ \ or\ \ a[5].pas_2\ \ or\ \ a[5].pas_3 \pmod {a[5].stp}
+x \equiv a[1].pas_0 \text{ or } a[1].pas_1 \text{ or } a[1].pas_2\text{ or }a[1].pas_3 \pmod {a[1].stp}\\
+x \equiv a[2].pas_0\text{ or }a[2].pas_1\text{ or }a[2].pas_2\text{ or }a[2].pas_3 \pmod {a[2].stp}\\
+x \equiv a[3].pas_0\text{ or }a[3].pas_1\text{ or }a[3].pas_2\text{ or }a[3].pas_3 \pmod {a[3].stp}\\
+x \equiv a[4].pas_0\text{ or }a[4].pas_1\text{ or }a[4].pas_2\text{ or } a[4].pas_3 \pmod {a[4].stp}\\
+x \equiv a[5].pas_0\text{ or }a[5].pas_1\text{ or }a[5].pas_2\text{ or }a[5].pas_3 \pmod {a[5].stp}
 \end{cases}
 $$
 
