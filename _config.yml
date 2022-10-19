@@ -408,7 +408,8 @@ theme_config:
   # Front-matter variable (unsupport animation).
   reward_settings:
     # If true, reward will be displayed in every article by default.
-    enable: true
+    # enable: true
+    enable: false
     animation: false
     comment: "如果阅读本篇文章需要付费，你愿意为此支付1块钱吗？"
 
@@ -621,7 +622,7 @@ theme_config:
 
   # Baidu Webmaster tools verification.
   # See: https://ziyuan.baidu.com/site
-  baidu_site_verification:
+  baidu_site_verification: code-CEEEqN0glv
 
   # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO.
   baidu_push: true
@@ -772,25 +773,25 @@ theme_config:
   # networks:
   # Weibo | Wechat | Douban | QQZone | Twitter | Facebook | Linkedin | Mailto | Reddit | Delicious | StumbleUpon | Pinterest
   # GooglePlus | Tumblr | GoogleBookmarks | Newsvine | Evernote | Friendfeed | Vkontakte | Odnoklassniki | Mailru
-  needmoreshare:
-    enable: true
-    cdn:
-      js: //cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js
-      css: //cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css
-    postbottom:
-      enable: true
-      options:
-        iconStyle: box
-        boxForm: horizontal
-        position: bottomCenter
-        networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
-    float:
-      enable: false
-      options:
-        iconStyle: box
-        boxForm: horizontal
-        position: middleRight
-        networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
+  # needmoreshare:
+  #   enable: true
+  #   cdn:
+  #     js: //cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js
+  #     css: //cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css
+  #   postbottom:
+  #     enable: true
+  #     options:
+  #       iconStyle: box
+  #       boxForm: horizontal
+  #       position: bottomCenter
+  #       networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
+  #   float:
+  #     enable: false
+  #     options:
+  #       iconStyle: box
+  #       boxForm: horizontal
+  #       position: middleRight
+  #       networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
 
 
 
