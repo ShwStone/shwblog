@@ -203,7 +203,8 @@ theme_config:
       color: "#ff0000"
 
     # If not defined, `author` from Hexo `_config.yml` will be used.
-    copyright: false
+    copyright: 
+      enable: false
 
     # Powered by Hexo & NexT
     powered: true
