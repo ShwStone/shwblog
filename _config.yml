@@ -204,7 +204,6 @@ theme_config:
 
     # If not defined, `author` from Hexo `_config.yml` will be used.
     copyright: 
-      enable: false
 
     # Powered by Hexo & NexT
     powered: true
@@ -228,7 +227,8 @@ theme_config:
   creative_commons:
     license: by-nc-sa
     sidebar: true
-    post: true
+    post: false
+    # post: true
     language:
 
 
