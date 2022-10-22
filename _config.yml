@@ -750,7 +750,7 @@ theme_config:
     fontawesome:
 
     # MathJax
-    mathjax: https://cdn.bootcdn.net/ajax/libs/mathjax/3.2.2/es5/tex-mml-svg.js
+    mathjax: https://cdn.bootcdn.net/ajax/libs/mathjax/3.2.2/es5/tex-svg.js
     #mathjax:
 
   # Assets
