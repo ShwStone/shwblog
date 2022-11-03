@@ -29,6 +29,7 @@
     "hexo-renderer-pandoc": "^0.3.1",
     "hexo-renderer-stylus": "^2.1.0",
     "hexo-server": "^3.0.0",
-    "hexo-sliding-spoiler": "^1.2.1"
+    "hexo-sliding-spoiler": "^1.2.1",
+    "markdown-palettes": "^0.4.13"
   }
 }
