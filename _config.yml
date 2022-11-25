@@ -99,7 +99,8 @@ markdown:
     - markdown-it-sub
     - markdown-it-abbr
     - markdown-it-emoji
-    - hexo-math
+    - hexo-renderer-kramed
+    - hexo-renderer-mathjax
 
 netlify_cms:
   config_file: netlify.yaml

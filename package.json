@@ -20,16 +20,13 @@
     "hexo-generator-searchdb": "^1.4.0",
     "hexo-generator-sitemap": "^3.0.1",
     "hexo-generator-tag": "^1.0.0",
-    "hexo-math": "^4.0.0",
     "hexo-neat": "^1.0.9",
     "hexo-netlify-cms": "^3.0.0",
-    "hexo-next-share": "github:theme-next/hexo-next-share",
-    "hexo-next-utteranc": "github:theme-next/hexo-next-utteranc",
     "hexo-renderer-ejs": "^2.0.0",
-    "hexo-renderer-pandoc": "^0.3.1",
+    "hexo-renderer-kramed": "^0.1.4",
+    "hexo-renderer-mathjax": "^0.6.0",
     "hexo-renderer-stylus": "^2.1.0",
     "hexo-server": "^3.0.0",
-    "hexo-sliding-spoiler": "^1.2.1",
-    "markdown-palettes": "^0.4.13"
+    "hexo-sliding-spoiler": "^1.2.1"
   }
 }
