@@ -132,7 +132,7 @@ graph[u].emplace_back(v);
 
 {% endspoiler %}
 
-### [题解](/categories/题解)
+### [题解](/categories/信奥/题解)
 
 ### 文化课
 
