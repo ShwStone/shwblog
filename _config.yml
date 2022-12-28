@@ -135,7 +135,7 @@ neat_js:
    - '**/index.js'
 
 index_generator_plus:
-  path: 'disable'
+  path: ''
   per_page: 10
 
 theme_config:
