@@ -1,7 +1,7 @@
 ---
 title: Princeza-题解
 date: 2022-07-13 16:23:41
-updated: 2022-07-13 16:23:41
+updateDate: 2022-07-13 16:23:41
 tags:
 categories:
 - 信奥
@@ -11,11 +11,11 @@ top: 2
 ---
 原题链接：[Link](https://www.luogu.com.cn/problem/P7193)
 
+
+<!-- more -->
 ## 题目描述
 
 Luka（女司机）把卡车停在湖边。Barica，Luka 知道她亲吻Barica，她会变成一个美丽的公主。但是，她需要先抓住她！
-
-<!-- more -->
 
 可以用一对坐标定义湖面上植物的位置。Barica 可以从 $(x, y)$ 植物跳跃到其它植物所在位置，$p$ 为任意正整数，下面给出了4种跳跃方式:
 

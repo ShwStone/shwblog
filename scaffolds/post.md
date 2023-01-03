@@ -1,7 +1,7 @@
 ---
-title: {{title}}
-date: {{date}}
-updated: {{date}}
+title: {{ title }}
+date: {{ date }}
+updateDate: {{ date }}
 tags:
 categories:
 comments: true

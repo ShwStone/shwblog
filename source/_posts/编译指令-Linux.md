@@ -1,17 +1,22 @@
 ---
 title: 编译指令-Linux
 date: 2022-07-13 16:25:07
-updated: 2022-07-13 16:25:07
+updateDate: 2022-07-13 16:25:07
 tags:
 categories:
 - 信奥
 comments: true
 top: 2
 ---
-注意 `~/.run` 文件夹可能需要手动新建。  
-`mkdir ~/.run`
+
+---
 
 <!-- more -->
+
+这一部分的最新代码已经在我的 [github](https://github.com/ShwStone/Dotfiles) 上。
+
+注意 `~/.run` 文件夹可能需要手动新建。  
+`mkdir ~/.run`
 
 ```sh
 #!/bin/sh

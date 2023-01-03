@@ -1,7 +1,7 @@
 ---
 title: Prozor-题解
 date: 2022-07-13 16:22:31
-updated: 2022-07-13 16:22:31
+updateDate: 2022-07-13 16:22:31
 tags:
 categories:
 - 信奥
@@ -11,9 +11,9 @@ top: 2
 ---
 原题链接：[Link](https://www.luogu.com.cn/problem/P8033)
 
-## 题面描述
-
 <!-- more -->
+
+## 题面描述
 
 ## 基本思路
 不考虑实现，地球人都可以想到最朴素的暴力：

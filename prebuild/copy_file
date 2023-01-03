@@ -1,1 +1,4 @@
 prebuild/spoiler.css node_modules/hexo-sliding-spoiler/assets/spoiler.css
+prebuild/renderer.js node_modules/hexo-renderer-kramed/lib/renderer.js
+prebuild/mathjax.html node_modules/hexo-renderer-mathjax/mathjax.html
+prebuild/inline.js node_modules/kramed/lib/rules/inline.js

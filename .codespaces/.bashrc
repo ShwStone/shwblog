@@ -1,0 +1,5 @@
+alias gita="git add -A"
+alias gitc="git commit -a -m"
+alias gitp="git push -f"
+alias cls="gita && gitc \"Auto commit\"; clear"
+alias ws="cd /workspaces/shwblog/source/_posts"
