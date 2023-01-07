@@ -1,0 +1,151 @@
+{
+  "main": {
+    "id": "dbaa1ecb47589611",
+    "type": "split",
+    "children": [
+      {
+        "id": "c09c1cd7f058e139",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "600c5b9671f309d4",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1f9aa155f7e2ea63",
+    "type": "split",
+    "children": [
+      {
+        "id": "43d9517d8902b285",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "63ebee1e536a2449",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "7e761549f5b826cc",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "1e779b90c6ab3a5e",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "bb9a839146c5dd84",
+    "type": "split",
+    "children": [
+      {
+        "id": "db9ffb31356ed8f1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6e83b30a498e96df",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "15140bb243e5c115",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "cc6a13cd6420477f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "db27c55ea84bdd01",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "63ebee1e536a2449",
+  "lastOpenFiles": [
+    "20230117题解.md",
+    "_posts/编译指令.md",
+    "未命名.md",
+    "_posts/光学总结.md",
+    "images/眼球.md",
+    "images/u=2f.md",
+    "_posts/2022高考全国卷甲卷作文.md"
+  ]
+}
