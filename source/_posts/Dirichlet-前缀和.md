@@ -17,7 +17,7 @@ categories:
 
 ## 问题简介
 
-已知序列 $a_{1...n}$ ，求出序列 $b_{1...n}$ ，其中：
+已知序列 $a_n$ ，求出序列 $b_n$ ，其中：
 
 $$
 b_i=\sum_{j|i}{a_j}
@@ -27,7 +27,7 @@ $$
 
 ## 解决方法
 
-一种显然的写法就是寻找每个 $i$ 的倍数，让 $b_i\text{ += }a_i,b_{ 2i }\text{ += }a_i,b_{3i}\text{ += }a_i...$ 来算贡献。这样的时间复杂度是 $N \ln N$ 的。不够优秀。
+一种显然的写法就是寻找每个 $i$ 的倍数，让 $b_i \leftarrow b_i + a_i,b_{2i} \leftarrow b_{2i} + a_i,b_{3i} \leftarrow b_{3i} + a_i$ …… 来算贡献。这样的时间复杂度是 $N \ln N$ 的。不够优秀。
 
 我们来考虑这样的一个数： $x=a\cdot p^k$ 。他会受到哪些数的贡献呢？显然，是 $a \cdot p^0,a \cdot p^1,a \cdot p^2...a \cdot p^k-1,a \cdot p^k$ 。那么我们可以这样：让 $a \cdot p^0$ 先给 $a \cdot p^1$ 做贡献，再让 $a \cdot p^1$ 带着自己和 $a \cdot p^0$ 的贡献一起给 $a \cdot p^2$ 做贡献，然后 $a \cdot p^2$ 再带着 $a \cdot p^0$ 与  $a \cdot p^1$ 的贡献一起给 $a \cdot p^3$ 做贡献……依次类推，以 $p$ 为步长的贡献就算完了。在 $O(N)$ 的时间就可以把所有的 $a$ 的贡献算出来，如下：
 
