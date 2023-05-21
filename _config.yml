@@ -625,7 +625,7 @@ theme_config:
 
   # Baidu Webmaster tools verification.
   # See: https://ziyuan.baidu.com/site
-  baidu_site_verification: code-CEEEqN0glv
+  baidu_site_verification: codeva-WbDcuv44nc
 
   # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO.
   baidu_push: true
