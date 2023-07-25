@@ -135,15 +135,6 @@ markdown:
     - markdown-it-emoji
     - hexo-renderer-kramed
 
-CloudCalendar:
-  enable: true
-  language: zh-CN
-  single: true
-  root: /calendar/
-  calendarCdn: //cdn.jsdelivr.net/gh/theme-next/theme-next-calendar/calendar.min.js
-  langCdn: //cdn.jsdelivr.net/gh/theme-next/theme-next-calendar/languages.min.js
-  #disableSidebar: false
-
 mathjax:
   tags: none # or 'ams' or 'all'
   single_dollars: true # enable single dollar signs as in-line math delimiters
@@ -155,3 +146,8 @@ mathjax:
   extension_options: {}
     # you can put your extension options here
     # see http://docs.mathjax.org/en/latest/options/input/tex.html#tex-extension-options for more detail
+
+sitemap:
+  path: sitemap.xml
+
+since: 2022
