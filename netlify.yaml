@@ -1,0 +1,66 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: source/images
+public_folder: /images
+publish_mode: editorial_workflow
+
+# pages auto generate
+pages: 
+  enabled: true
+  # over page collection config
+  # if fields not set, would use posts fields config
+  config:
+    label: "Page"
+    delete: false
+    editor:
+      preview: true
+    # fields: 
+# through hexo config over fields
+over_format: true
+scripts:
+  - js/cms/youtube.js
+  - js/cms/img.js
+
+auto_generator:
+  post: 
+    # 如果你有多个Post文件夹，在这里定义多个，见https://github.com/jiangtj/blog/blob/master/netlify-cms.yaml
+    all_posts:
+      # 设置为false，关闭默认的Post
+      enabled: false
+      label: "Post"
+      folder: "source/_posts"
+      create: true
+      editor:
+        preview: true
+  # Page生成配置
+  page: 
+    enabled: true
+    config:
+      label: "Page"
+      # 默认禁止删除Page文件
+      delete: false
+      editor:
+        preview: true
+
+# A list of collections the CMS should be able to edit
+collections:
+  # Used in routes, ie.: /admin/collections/:slug/edit
+  - name: "posts"
+    # Used in the UI, ie.: "New Post"
+    label: "Post"
+    folder: "source/_posts" # The path to the folder where the documents are stored
+    sort: "date:desc"
+    create: true # Allow users to create new documents in this collection
+    editor:
+      preview: true
+    fields: # The fields each document in this collection have
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false}
+      - {label: "Update Date", name: "updateDate", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: "Categories", name: "categories", widget: "list", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
+      - {label: "Comments", name: "comments", widget: "boolean", default: true, required: false}
+      - {label: "Top", name: "top", widget: "number", value_type: "int", default: 2, required: false}
