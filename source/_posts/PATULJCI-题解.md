@@ -1,5 +1,5 @@
 ---
-title: PATULJCI-题解
+title: P7261-PATULJCI-题解
 date: 2022-07-13 16:21:39
 updateDate: 2022-07-13 16:21:39
 tags:
@@ -10,8 +10,6 @@ comments: true
 top: 2
 ---
 原题链接：[Link](https://www.luogu.com.cn/problem/P7261)
-
-## 题目描述
 
 <!--more-->
 
