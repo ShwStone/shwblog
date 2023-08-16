@@ -9,7 +9,7 @@ categories:
 comments: true
 top: 2
 ---
-原题链接：[Link](https://xoj.red/group/1005/problem/5232)
+原题链接：[Link](https://xoj.red/problem/5232)
 
 <!-- more -->
 ## 题目描述
