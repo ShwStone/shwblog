@@ -46,7 +46,7 @@ auto_generator:
 
 # A list of collections the CMS should be able to edit
 collections:
-  # Used in routes, ie.: /admin/collections/:slug/edit
+  # Used in routes, ie. : /admin/collections/:slug/edit
   - name: "posts"
     # Used in the UI, ie.: "New Post"
     label: "Post"
