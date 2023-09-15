@@ -637,15 +637,6 @@ hexo-log@^4.0.1:
   dependencies:
     picocolors "^1.0.0"
 
-hexo-netlify-cms@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/hexo-netlify-cms/-/hexo-netlify-cms-3.0.0.tgz#3e12f50422c5f0ad61cdbd2178cd3ff9769446a4"
-  integrity sha512-puJAjQO2CgXZKbWD/Y8emZ5qZwkGt8qMN5bZnDqJiR5KlNPrxI89lFF7zpKGgQrn3PFARuqaO6r88U1u8SQfYA==
-  dependencies:
-    ejs "^3.1.6"
-    js-yaml "^4.1.0"
-    lodash "^4.17.21"
-
 hexo-next-giscus@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/hexo-next-giscus/-/hexo-next-giscus-1.1.0.tgz#b0648c90fc151f0286d3ca27d57393ae2a7b8698"
@@ -915,11 +906,6 @@ jsonparse@^1.3.1:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/jsonparse/-/jsonparse-1.3.1.tgz#3f4dae4a91fac315f71062f8521cc239f1366280"
   integrity sha512-POQXvpdL69+CluYsillJ7SUhKvytYjW9vG/GKpnf+xP8UWgYEM/RaMzHHofbALDiKbbP1W8UEYmgGl39WkPZsg==
-
-lodash@^4.17.21:
-  version "4.17.21"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
-  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 lower-case@^2.0.2:
   version "2.0.2"
