@@ -6,7 +6,7 @@ tags: 博客
 categories:
   - hexo
 comments: true
-top: 2
+top: 3
 ---
 
 前情提要：不花一分钱搭建一个**带有后台**的个人 Blog 。
@@ -33,6 +33,8 @@ top: 2
 
 hexo 要由 node.js 的软件包管理器 npm 安装。此外 hexo 依赖于 git ,所以要现安装 node.js 和 git 。
 
+**（不是非要 Linux。关于 npm、hexo 的脚本在 powershell 就可以运行。）**
+
 ```sh
 yay -S nodejs git
 # sudo pacman -S nodejs git
@@ -40,7 +42,7 @@ yay -S nodejs git
 # sudo yum install nodejs git-core
 ```
 
-对于其他用户：
+对于 Windows，Mac 用户：
 
 - [git](https://git-scm.com/downloads)
 - [nodejs](https://nodejs.org/zh-cn/)
@@ -51,6 +53,10 @@ yay -S nodejs git
 sudo npm install -g hexo-cli
 ```
 
+##### 关于 windows 系统上禁止运行脚本
+
+在设置里查找 powershell，找到并打开“允许本地powershell脚本在未签名的情况下运行”。
+
 #### 建站
 
 选择你想要建立blog的路径。假设想要建立在 `~/Blog` 文件夹：
@@ -58,6 +64,8 @@ sudo npm install -g hexo-cli
 ```sh
 cd ~; hexo init Blog; cd Blog; npm install
 ```
+
+（`~` 是 Linux 的主目录，类似 Windows 的 `C:/Users/Admin/`）
 
 ok。现在 hexo 已经可以使用。默认有一篇文章 `helloworld` 。注意：如果 hexo 一篇文章都没有，则无法生成网站。
 
@@ -126,7 +134,7 @@ pretty_urls:
 
 ### github
 
-好。现在我们考虑怎么把网站放到github上：
+好。现在我们考虑怎么把网站放到 github 上：
 
 首先我们要知道怎么生成 `public` 文件夹：
 
@@ -134,13 +142,17 @@ pretty_urls:
 hexo clean && hexo g
 ```
 
-现在 `Blog` 目录中就有了 `public` 目录。我们可以手动把它push到git仓库上。
+现在 `Blog` 目录中就有了 `public` 目录。我们可以手动把它 push 到 git 仓库上。
 
 ```sh
 git push git@github.com:username/username.github.io --set-upstream main -f
 ```
 
-这里前提是要配置好 ssh-key 。操作也很简单：
+这里前提是要配置好 ssh-key 。
+
+{% note info no-icon 如果没有配置 ssh-key，看这里： %}
+
+操作也很简单：
 
 ```sh
 ssh-keygen -t rsa -b 4096
@@ -170,7 +182,9 @@ ssh-keygen -t rsa -b 4096
 cat ~/.ssh/id_rsa.pub
 ```
 
-将文件内容复制后，打开 github “个人settings”-“ssh” ，添加公钥，将复制内容粘贴进去。
+将文件内容复制后，打开 github “个人settings”-“ssh” ，添加公钥，将复制内容粘贴进去。（Windows 直接复制就好啦）
+
+{% endnote %}
 
 那么打开 username.github.io 的仓库配置，settings-pages ,选择打开 pages （默认应该是打开的），再打开网站 `username.github.io` 就可以看到刚刚生成的网址了。
 
@@ -268,6 +282,12 @@ hexo new page about
 
 ### 其他插件
 
+#### next 内置插件
+
+next 在蛰伏了许久之后，终于迎来了 next8.0。
+
+现在已经有超多的内置功能和社区维护插件。内置功能在这：[Link](https://theme-next.js.org/docs/)
+
 #### 文章排序
 
 hexo 默认的排序是根据发布日期。有时我们会希望将文章置顶或按照 update 日期排序，可以利用一个插件实现：
@@ -322,6 +342,18 @@ npm install hexo-sliding-spoiler --save
 bug 修复：
 spoiler 内容默认超过一定长度就会隐藏。打开 `node_modules/hexo-sliding-spoiler/assets/spoiler.css` 编辑 `.spoiler.expanded .spoiler-content` 中的 `overflow` 选项，改为 `auto` ，就会出现滚轮滑动来查看。
 
+#### note
+
+感谢 @[Eray](https://www.luogu.com.cn/user/192806) 提醒，next 内置了可以折叠的 note 功能。并且还有比较完整的高亮设计，跟 OI-wiki 的用法差不多。
+
+可以代替 spoiler 使用。详见官方 [Wiki](https://theme-next.js.org/docs/tag-plugins/note.html)
+
+示例：
+
+{% note info %}
+这是一段话。
+{% endnote %}
+
 #### mathjax
 
 这与主题 next 相关，因此放到 next 中去讲。
@@ -344,22 +376,19 @@ next 是一个~~我觉得~~挺好看并且插件多，社区活跃的主题。
 
 ### 安装
 
-安装如下：
+{% note danger %}
+现在 next 不再推荐使用 git 的安装方法， 但是如果想要更高的定制化，推荐使用 git。
+{% endnote %}
 
 ```sh
-git clone git@github.com:hexo-next/hexo-next-theme.git themes/next
+npm install hexo-theme-next
 ```
-
-这样做的好处是要更新时可以直接
-
-```sh
-cd themes/next
-git pull
-```
-
-但是为了能这样做，我们就需要把 next 的配置文件迁出来。 next 也有一个配置文件 `themes/next/_config.yml` ，将里面的内容复制出来，粘贴到站点的 `_config.yml` ，然后将所有复制的文本前面加上两个空格的缩进（选中之后调整缩进长度为2,按下tab键），再在开头顶格输入 `theme_config:` 。接下来所有操作都在 `theme_config:` 中进行，不修改 `themes/next/_config.yml` 。
 
 ### 配置
+
+在站点目录下新建配置文件：`_config.next.yml` 。
+
+建议复制一份官方示例：[Link](https://github.com/theme-next/hexo-theme-next/blob/master/_config.yml)
 
 接下来我们看一看 next 的配置：
 
@@ -568,7 +597,7 @@ npm uninstall hexo-renderer-marked --save
 npm install hexo-renderer-pandoc hexo-math --save
 ```
 
-同时安装[pandoc](https://pandoc.org/installing.html)：
+同时安装[pandoc](https://pandoc.org/installing.html)（[非 Linux 用户点这个链接](https://pandoc.org/installing.html)）：
 
 ```sh
 yay -S pandoc
@@ -579,20 +608,9 @@ yay -S pandoc
 
 #### 评论
 
-使用[utteranc](https://utteranc.es/)。去官网注册一个账号，绑定一个空的 github 仓库（比如叫comments），然后在配置文件里新建字段如下：
+评论的插件其实有很多，在多方考虑之后，现在使用的是 OI-wiki 同款的 giscus，最大的好处就是在评论区支持 Mathjax。（曾经用的是utteranc）
 
-```yaml
-  # Demo: https://utteranc.es/  http://trumandu.github.io/about/
-  utteranc:
-    enable: true
-    repo: yourname/comments #Github repo such as :TrumanDu/comments
-    pathname: pathname
-    # theme: github-light,github-dark,github-dark-orange
-    theme: github-light
-    cdn: https://utteranc.es/client.js
-```
-
-只需改动 `repo` 即可。
+giscus 官方文档很详细，这里直接放链接：[giscus](https://github.com/giscus/giscus)
 
 #### 访问量统计
 
@@ -743,6 +761,8 @@ do
     cp $line -f
 done < prebuild/file
 ```
+
+（Windows 用户照着抄就好了。 Netlify 自动构建的环境是 Linux，所以要这么写）
 
 push 到 github 上。
 
