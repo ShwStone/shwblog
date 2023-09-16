@@ -53,9 +53,12 @@ yay -S nodejs git
 sudo npm install -g hexo-cli
 ```
 
+{% note danger %}
 ##### 关于 windows 系统上禁止运行脚本
 
 在设置里查找 powershell，找到并打开“允许本地powershell脚本在未签名的情况下运行”。
+
+{% endnote %}
 
 #### 建站
 
@@ -394,7 +397,7 @@ npm install hexo-theme-next
 
 PS：以下配置内容如没有就新建。
 
-#### 主题
+{% note info #### 主题 %}
 
 next 默认有4中主题可选。找到 `Schemes` ：
 
@@ -408,7 +411,9 @@ scheme: Muse
 
 默认主题是 Muse ，可以逐个试一试。
 
-#### 页面
+{% endnote %}
+
+{% note info #### 页面 %}
 
 在 `menu` 选项中取消你想要的页面的注释：
 
@@ -424,7 +429,9 @@ scheme: Muse
     #commonweal: /404.html || fa fa-heartbeat
 ```
 
-#### 头像
+{% endnote %}
+
+{% note info #### 头像 %}
 
 找到 `avatar` 字段：
 
@@ -440,7 +447,9 @@ scheme: Muse
 
 在 `source` 中新建 `images` 文件夹，里面放入你的图片。 `rounded` 设置圆形， `rotated` 设置鼠标放上去就旋转。
 
-#### 社交账号和友链
+{% endnote %}
+
+{% note info #### 社交账号和友链 %}
 
 找到 `social` 字段：
 
@@ -478,7 +487,9 @@ scheme: Muse
 
 `links` 设置友链。
 
-#### 打赏
+{% endnote %}
+
+{% note info #### 打赏 %}
 
 ~~说不定有好心人呢？~~找到 `reward` 字段：
 
@@ -498,7 +509,9 @@ scheme: Muse
 
 在 `reward` 中设置你的收款码。方法同头像。
 
-#### 代码块设置
+{% endnote %}
+
+{% note info #### 代码块设置 %}
 
 找到字段 `codeblock` ：
 
@@ -521,7 +534,9 @@ scheme: Muse
 
 `copy_button` 配置复制按钮
 
-#### 一键回到顶部
+{% endnote %}
+
+{% note info #### 一键回到顶部 %}
 
 找到字段 `back2top` ：
 
@@ -534,7 +549,9 @@ scheme: Muse
     scrollpercent: true
 ```
 
-#### 阅读进度
+{% endnote %}
+
+{% note info #### 阅读进度 %}
 
 找到字段 `reading_progres` ：
 
@@ -549,7 +566,9 @@ scheme: Muse
 
 `position` 中 `top` 在顶部， `bottom` 浮动在按钮上。
 
-#### 你的Github
+{% endnote %}
+
+{% note info #### 你的Github %}
 
 找到字段 `github_banner`：
 
@@ -562,7 +581,9 @@ scheme: Muse
 
 `title` 可修改
 
-#### mathjax
+{% endnote %}
+
+{% note info #### mathjax %}
 
 找到字段 `math` ：
 
@@ -606,13 +627,17 @@ yay -S pandoc
 # sudo rpm install pandoc
 ```
 
-#### 评论
+{% endnote %}
+
+{% note info #### 评论 %}
 
 评论的插件其实有很多，在多方考虑之后，现在使用的是 OI-wiki 同款的 giscus，最大的好处就是在评论区支持 Mathjax。（曾经用的是utteranc）
 
 giscus 官方文档很详细，这里直接放链接：[giscus](https://github.com/giscus/giscus)
 
-#### 访问量统计
+{% endnote %}
+
+{% note info #### 访问量统计 %}
 
 找到字段 `busuanzi_count` ：
 
@@ -631,7 +656,9 @@ giscus 官方文档很详细，这里直接放链接：[giscus](https://github.c
 
 全部为 `true` 即可。
 
-#### 站内搜索
+{% endnote %}
+
+{% note info #### 站内搜索 %}
 
 找到字段 `localsearch` ：
   
@@ -657,7 +684,9 @@ giscus 官方文档很详细，这里直接放链接：[giscus](https://github.c
 npm install hexo-generator-searchdb --save
 ```
 
-#### 分享文章
+{% endnote %}
+
+{% note info #### 分享文章 %}
 
 找到字段 `needmoreshare` ：
 
@@ -697,6 +726,8 @@ npm install hexo-generator-searchdb --save
 ```sh
 npm install hexo-next-share
 ```
+
+{% endnote %}
 
 ### 效果
 
@@ -806,9 +837,7 @@ upd：netlify-cms 已经被弃用，现在使用 decap-cms。
 
 分别编辑如下：
 
-{% note info %}
-
-**config.yml**
+{% note info **config.yml** %}
 
 ```yaml
 backend:
@@ -851,9 +880,7 @@ collections:
 ```
 {% endnote %}
 
-{% note info %}
-
-**index.html**
+{% note info **index.html** %}
 
 ```html
 <!doctype html>
