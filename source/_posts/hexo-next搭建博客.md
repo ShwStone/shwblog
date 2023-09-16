@@ -780,11 +780,7 @@ PS：如果 windows 无法执行 chmod 的话，把构建指令改为 `npm insta
 
 接下来我们来看后台的使用。
 
-#### 安装
-
-```sh
-npm install netlify-cms-app --save
-```
+upd：netlify-cms 已经被弃用，现在使用 decap-cms。
 
 #### 配置
 
@@ -806,58 +802,35 @@ npm install netlify-cms-app --save
 <!--netlify cms 有一个小 bug ，登录时需要手动刷新。这是自动刷新的代码-->
 ```
 
-然后去 github 上，在根目录新建 `netlify.yaml` ：
+然后在 `source` 文件夹下新建一个文件夹：`source/admin`，再建两个文件：`source/admin/index.html`，`source/admin/config.yml`
+
+分别编辑如下：
+
+{% note info %}
+
+**config.yml**
 
 ```yaml
 backend:
-  name: git-gateway
-  branch: main
+  name: github
+  repo: # repo name
+  branch: main # Branch to update (optional; defaults to master)
 
-media_folder: source/images
-public_folder: /images
+site_url: https://shwst.one
+display_url: https://shwst.one
+# logo_url: https://shwst.one/images/
+locale: 'cn'
+
+# This line should *not* be indented
 publish_mode: editorial_workflow
 
-# pages auto generate
-pages: 
-  enabled: true
-  # over page collection config
-  # if fields not set, would use posts fields config
-  config:
-    label: "Page"
-    delete: false
-    editor:
-      preview: true
-    # fields: 
-# through hexo config over fields
-over_format: true
-scripts:
-  - js/cms/youtube.js
-  - js/cms/img.js
-
-auto_generator:
-  post: 
-    # 如果你有多个Post文件夹，在这里定义多个，见https://github.com/jiangtj/blog/blob/master/netlify-cms.yaml
-    all_posts:
-      # 设置为false，关闭默认的Post
-      enabled: false
-      label: "Post"
-      folder: "source/_posts"
-      create: true
-      editor:
-        preview: true
-  # Page生成配置
-  page: 
-    enabled: true
-    config:
-      label: "Page"
-      # 默认禁止删除Page文件
-      delete: false
-      editor:
-        preview: true
+# This line should *not* be indented
+media_folder: "source/images" # Media files will be stored in the repo under images/uploads
+public_folder: "source"
 
 # A list of collections the CMS should be able to edit
 collections:
-  # Used in routes, ie.: /admin/collections/:slug/edit
+  # Used in routes, ie. : /admin/collections/:slug/edit
   - name: "posts"
     # Used in the UI, ie.: "New Post"
     label: "Post"
@@ -868,25 +841,49 @@ collections:
       preview: true
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm:ss", required: false}
-      - {label: "Update Date", name: "updateDate", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm:ss", required: false}
+      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false}
+      - {label: "Update Date", name: "updateDate", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false}
       - {label: "Tags", name: "tags", widget: "list", required: false}
       - {label: "Categories", name: "categories", widget: "list", required: false}
       - {label: "Body", name: "body", widget: "markdown", required: false}
       - {label: "Comments", name: "comments", widget: "boolean", default: true, required: false}
       - {label: "Top", name: "top", widget: "number", value_type: "int", default: 2, required: false}
 ```
+{% endnote %}
 
-注意 `backend` 中的 `branch` 要与你的实际分支相匹配。
+{% note info %}
+
+**index.html**
+
+```html
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Content Manager</title>
+</head>
+<body>
+  <!-- Include the script that builds the page and powers Decap CMS -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+</body>
+</html>
+```
+{% endnote %}
+
+注意 `backend` 中的 `repo & branch` 要与你的实际分支相匹配。
 
 然后在 netlify 中找到 site-settings-identity ，找到 git-gateway ，点击启用，选择 Blog 仓库。
 
 这样你就可以在 `你的网址/admin` 中看到登陆界面了。
 
+另外，如果出现权限问题，请按照 [Netlify-docs](https://docs.netlify.com/visitor-access/oauth-provider-tokens/) 配置 auth。
+
 自己注册一个 admin 账户，然后在 identity 中关闭注册，只允许邀请，保证安全。
 
-ok 。尽情享受 netlify CMS 吧！
+ok 。尽情享受 CMS 吧！
 
 ### To do
 
-Netlify CMS 不支持 latex ，并且 bug 较多，我以后有时间可能会把 Luogu 的 Markdown*Palettes 嵌入到 netlify 的 markdown 编辑器里，自己做一个小部件，或者哪位大佬帮我写一下吧 qwq 。
+decap CMS 不支持 latex ，并且 bug 较多，我以后有时间可能会把 Luogu 的 Markdown*Palettes 嵌入到 netlify 的 markdown 编辑器里，自己做一个小部件，或者哪位大佬帮我写一下吧 qwq 。
