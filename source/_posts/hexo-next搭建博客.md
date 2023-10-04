@@ -391,7 +391,7 @@ npm install hexo-theme-next
 
 在站点目录下新建配置文件：`_config.next.yml` 。
 
-建议复制一份官方示例：[Link](https://github.com/theme-next/hexo-theme-next/blob/master/_config.yml)
+建议复制一份官方示例：[Link](https://github.com/next-theme/hexo-theme-next/blob/master/_config.yml)
 
 接下来我们看一看 next 的配置：
 
@@ -591,25 +591,23 @@ next 支持 mathjax 和 katex 。一般来说 katex 渲染快，而且 next 也�
 
 ```yaml
   math:
-    # Default (true) will load mathjax / katex script on demand.
-    # That is it only render those page which has `mathjax: true` in Front-matter.
-    # If you set it to false, it will load mathjax / katex srcipt EVERY PAGE.
-    per_page: false
+  # Default (false) will load mathjax / katex script on demand.
+  # That is it only render those page which has `mathjax: true` in front-matter.
+  # If you set it to true, it will load mathjax / katex script EVERY PAGE.
+  every_page: true
 
-    # hexo-renderer-pandoc (or hexo-renderer-kramed) required for full MathJax support.
-    mathjax:
-      enable: true
-      # See: https://mhchem.github.io/MathJax-mhchem/
-      mhchem: true
+  mathjax:
+    enable: true
+    # Available values: none | ams | all
+    tags: none
 
-    # hexo-renderer-markdown-it-plus (or hexo-renderer-markdown-it with markdown-it-katex plugin) required for full Katex support.
-    katex:
-      enable: false
-      # See: https://github.com/KaTeX/KaTeX/tree/master/contrib/copy-tex
-      copy_tex: false
+  katex:
+    enable: false
+    # See: https://github.com/KaTeX/KaTeX/tree/master/contrib/copy-tex
+    copy_tex: false
 ```
 
-`per_page` 配置是否对每篇文章开启渲染。逻辑比较奇怪， `false` 反而是开启渲染（网上好多文章都说是 `true` ,害得我踩了好几遍坑）。建议开启，不然每篇文章开头都要加上 `front-matter` ： `mathjax: true` 。
+`every_page` 配置是否对每篇文章开启渲染。建议开启，不然每篇文章开头都要加上 `front-matter` ： `mathjax: true` 。
 
 想要启用 mathjax ,还需：
 
