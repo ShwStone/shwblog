@@ -937,7 +937,7 @@ tidio:
 # ---------------------------------------------------------------
 
 vendors:
-  mathjax: https://cdn.bootcdn.net/ajax/libs/mathjax/3.2.2/es5/tex-svg.js
+  mathjax: https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.js
   # The CDN provider of NexT internal scripts.
   # Available values: local | jsdelivr | unpkg | cdnjs | custom
   # Warning: If you are using the latest master branch of NexT, please set `internal: local`
