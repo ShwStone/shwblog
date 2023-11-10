@@ -1,0 +1,595 @@
+---
+comments: true
+title: MBTI 人格测试
+---
+
+<html>
+
+<head>
+    <style>
+        input {
+            appearance: none;
+
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+
+            border: 2px solid #999;
+            transition: 0.2s all linear;
+            margin-right: 5px;
+
+            position: relative;
+            top: 4px;
+        }
+
+        input:checked {
+            border: 6px solid black;
+        }
+
+        .btn {
+            border: 2px solid #0099CC;
+            background: transparent;
+            /* 给边框添加圆角 */
+            border-radius: 6px;
+            background-color: white;
+            color: black;
+            font-size: 18px;
+            /*     font-weight: bold; */
+            padding: 6px 6px;
+        }
+
+        /* 悬停样式 */
+        .btn:hover {
+            background-color: #008CBA;
+            color: white;
+        }
+
+        div {
+            width: 50%;
+            margin: auto;
+        }
+
+        h3 {
+            width: 50%;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>第一部分：请选择最接近地描述了你通常的思考和行为方式的选项</h3>
+    <div id="problem1" class="JP">
+        <p>1: 当你某日想去某个地方，你会___?</p>
+        <p><input type="radio" id="problem1A" value="A" name="problem1" /> A.计划好将做的事情以及何时做</p>
+        <p><input type="radio" id="problem1B" value="B" name="problem1" /> B.什么都不想就去</p>
+    </div>
+    <div id="problem2" class="SN">
+        <p>2: 如果你是一位老师，你愿教___?</p>
+        <p><input type="radio" id="problem2A" value="A" name="problem2" /> A.涉及事实的课程</p>
+        <p><input type="radio" id="problem2B" value="B" name="problem2" /> B.涉及理论的课程</p>
+    </div>
+    <div id="problem3" class="EI">
+        <p>3: 你通常是___?</p>
+        <p><input type="radio" id="problem3A" value="A" name="problem3" /> A.善于交际的人</p>
+        <p><input type="radio" id="problem3B" value="B" name="problem3" /> B.安静缄默的人</p>
+    </div>
+    <div id="problem4" class="JP">
+        <p>4: 你喜欢___?</p>
+        <p><input type="radio" id="problem4A" value="A" name="problem4" /> A.事先安排好约会，聚会等</p>
+        <p><input type="radio" id="problem4B" value="B" name="problem4" /> B.只要时机恰当就无拘无束地做任何有趣的事</p>
+    </div>
+    <div id="problem5" class="SN">
+        <p>5: 你通常和___相处得更好?</p>
+        <p><input type="radio" id="problem5A" value="A" name="problem5" /> A.现实的人</p>
+        <p><input type="radio" id="problem5B" value="B" name="problem5" /> B.想象力丰富的人</p>
+    </div>
+    <div id="problem6" class="EI">
+        <p>6: 当你和一群人在一起时，你会___?</p>
+        <p><input type="radio" id="problem6A" value="A" name="problem6" /> A.参加大家的谈话</p>
+        <p><input type="radio" id="problem6B" value="B" name="problem6" /> B.只同你熟知的人单独谈话</p>
+    </div>
+    <div id="problem7" class="FT">
+        <p>7: 往往，你是___?</p>
+        <p><input type="radio" id="problem7A" value="A" name="problem7" /> A.情感驾驭理智</p>
+        <p><input type="radio" id="problem7B" value="B" name="problem7" /> B.理智驾驭情感</p>
+    </div>
+    <div id="problem8" class="JP">
+        <p>8: 你更喜欢___做多数事情?</p>
+        <p><input type="radio" id="problem8A" value="A" name="problem8" /> A.有计划地</p>
+        <p><input type="radio" id="problem8B" value="B" name="problem8" /> B.即兴时</p>
+    </div>
+    <div id="problem9" class="SN">
+        <p>9: 你愿意自己被认为是一个___?</p>
+        <p><input type="radio" id="problem9A" value="A" name="problem9" /> A.善于动手的人</p>
+        <p><input type="radio" id="problem9B" value="B" name="problem9" /> B.善于创意的人</p>
+    </div>
+    <div id="problem10" class="EI">
+        <p>10: 在大群体中，你常更多地___?</p>
+        <p><input type="radio" id="problem10A" value="A" name="problem10" /> A.介绍他人</p>
+        <p><input type="radio" id="problem10B" value="B" name="problem10" /> B.由别人来介绍你</p>
+    </div>
+    <div id="problem11" class="JP">
+        <p>11: 按日程表办事___?</p>
+        <p><input type="radio" id="problem11A" value="A" name="problem11" /> A.正合你意</p>
+        <p><input type="radio" id="problem11B" value="B" name="problem11" /> B.束缚了你</p>
+    </div>
+    <div id="problem12" class="SN">
+        <p>12: 你更喜欢___?</p>
+        <p><input type="radio" id="problem12A" value="A" name="problem12" /> A.务实且有丰富常识的人</p>
+        <p><input type="radio" id="problem12B" value="B" name="problem12" /> B.头脑灵活的人</p>
+    </div>
+    <div id="problem13" class="EI">
+        <p>13: 你觉得通常别人要花费___?</p>
+        <p><input type="radio" id="problem13A" value="A" name="problem13" /> A.一小段时间来了解你</p>
+        <p><input type="radio" id="problem13B" value="B" name="problem13" /> B.很久来了解你</p>
+    </div>
+    <div id="problem14" class="FT">
+        <p>14: 被称为___是更高的赞赏?</p>
+        <p><input type="radio" id="problem14A" value="A" name="problem14" /> A.感性的人</p>
+        <p><input type="radio" id="problem14B" value="B" name="problem14" /> B.一贯理性的人</p>
+    </div>
+    <div id="problem15" class="JP">
+        <p>15: 对于制定周末计划，你觉得___?</p>
+        <p><input type="radio" id="problem15A" value="A" name="problem15" /> A.很有必要</p>
+        <p><input type="radio" id="problem15B" value="B" name="problem15" /> B.没必要</p>
+    </div>
+    <div id="problem16" class="SN">
+        <p>16: 你愿把___作为朋友?</p>
+        <p><input type="radio" id="problem16A" value="A" name="problem16" /> A.脚踏实地的人</p>
+        <p><input type="radio" id="problem16B" value="B" name="problem16" /> B.常有新观点的人</p>
+    </div>
+    <div id="problem17" class="EI">
+        <p>17: 多数时候，你倾向于___?</p>
+        <p><input type="radio" id="problem17A" value="A" name="problem17" /> A.同他人在一起</p>
+        <p><input type="radio" id="problem17B" value="B" name="problem17" /> B.独处</p>
+    </div>
+    <div id="problem18" class="JP">
+        <p>18: 日常工作中，你喜欢___?</p>
+        <p><input type="radio" id="problem18A" value="A" name="problem18" /> A.通常先安排好工作并加以完成，以免压力过大</p>
+        <p><input type="radio" id="problem18B" value="B" name="problem18" /> B.在时间紧迫的情况下年分夺秒地工作</p>
+    </div>
+    <div id="problem19" class="SN">
+        <p>19: 当你为了消遣而阅读时，你___?</p>
+        <p><input type="radio" id="problem19A" value="A" name="problem19" /> A.喜欢作者确切地表达其意恩</p>
+        <p><input type="radio" id="problem19B" value="B" name="problem19" /> B.欣赏奇特新颖的表达方式</p>
+    </div>
+    <div id="problem20" class="EI">
+        <p>20: 你能否___?</p>
+        <p><input type="radio" id="problem20A" value="A" name="problem20" /> A.只要愿意就能轻松地同几乎任何人说个没完</p>
+        <p><input type="radio" id="problem20B" value="B" name="problem20" /> B.只能在特定场合下或同特定的人才愿意讲许多话</p>
+    </div>
+    <div id="problem21" class="FT">
+        <p>21: 你更倾向于___?</p>
+        <p><input type="radio" id="problem21A" value="A" name="problem21" /> A.感性地做事</p>
+        <p><input type="radio" id="problem21B" value="B" name="problem21" /> B.依逻辑行事</p>
+    </div>
+    <div id="problem22" class="JP">
+        <p>22: 当有一项特殊工作时，你会___?</p>
+        <p><input type="radio" id="problem22A" value="A" name="problem22" /> A.在开始前精心组织策划</p>
+        <p><input type="radio" id="problem22B" value="B" name="problem22" /> B.在工作进行中找出必要环节</p>
+    </div>
+    <div id="problem23" class="SN">
+        <p>23: 做很多人都会做的事情时，你喜欢___?</p>
+        <p><input type="radio" id="problem23A" value="A" name="problem23" /> A.按惯例做</p>
+        <p><input type="radio" id="problem23B" value="B" name="problem23" /> B.按自己独创的方式做</p>
+    </div>
+    <div id="problem24" class="EI">
+        <p>24: 你新认识的人___说出你的兴趣所在?</p>
+        <p><input type="radio" id="problem24A" value="A" name="problem24" /> A.马上就能</p>
+        <p><input type="radio" id="problem24B" value="B" name="problem24" /> B.只有当他们真正了解你之后才能</p>
+    </div>
+    <div id="problem25" class="JP">
+        <p>25: 在计划一次旅行时，你更喜欢___?</p>
+        <p><input type="radio" id="problem25A" value="A" name="problem25" /> A.事先就知道在大部分日子所将做的事情</p>
+        <p><input type="radio" id="problem25B" value="B" name="problem25" /> B.在多数情况下随心所欲地行事</p>
+    </div>
+    <div id="problem26" class="EI">
+        <p>26: 多数人认为你___?</p>
+        <p><input type="radio" id="problem26A" value="A" name="problem26" /> A.非常坦率</p>
+        <p><input type="radio" id="problem26B" value="B" name="problem26" /> B.不太把自己的事情告诉别人</p>
+    </div>
+    <h3>第二部分：在以下各对词中，你更倾向于哪一个。考虑以下这些词的意思，而不是它们好不好听或好不好看。</h3>
+    <div id="problem27" class="SN">
+        <p>27: </p>
+        <p><input type="radio" id="problem27A" value="A" name="problem27" /> A.事实</p>
+        <p><input type="radio" id="problem27B" value="B" name="problem27" /> B.观点</p>
+    </div>
+    <div id="problem28" class="FT">
+        <p>28: </p>
+        <p><input type="radio" id="problem28A" value="A" name="problem28" /> A.热忱</p>
+        <p><input type="radio" id="problem28B" value="B" name="problem28" /> B.坚决</p>
+    </div>
+    <div id="problem29" class="SN">
+        <p>29: </p>
+        <p><input type="radio" id="problem29A" value="A" name="problem29" /> A.切实</p>
+        <p><input type="radio" id="problem29B" value="B" name="problem29" /> B.创新</p>
+    </div>
+    <div id="problem30" class="JP">
+        <p>30: </p>
+        <p><input type="radio" id="problem30A" value="A" name="problem30" /> A.有计划</p>
+        <p><input type="radio" id="problem30B" value="B" name="problem30" /> B.随意</p>
+    </div>
+    <div id="problem31" class="SN">
+        <p>31: </p>
+        <p><input type="radio" id="problem31A" value="A" name="problem31" /> A.实在</p>
+        <p><input type="radio" id="problem31B" value="B" name="problem31" /> B.抽象</p>
+    </div>
+    <div id="problem32" class="FT">
+        <p>32: </p>
+        <p><input type="radio" id="problem32A" value="A" name="problem32" /> A.感觉</p>
+        <p><input type="radio" id="problem32B" value="B" name="problem32" /> B.思考</p>
+    </div>
+    <div id="problem33" class="SN">
+        <p>33: </p>
+        <p><input type="radio" id="problem33A" value="A" name="problem33" /> A.已知的</p>
+        <p><input type="radio" id="problem33B" value="B" name="problem33" /> B.新颖的</p>
+    </div>
+    <div id="problem34" class="FT">
+        <p>34: </p>
+        <p><input type="radio" id="problem34A" value="A" name="problem34" /> A.感性</p>
+        <p><input type="radio" id="problem34B" value="B" name="problem34" /> B.理性</p>
+    </div>
+    <div id="problem35" class="JP">
+        <p>35: </p>
+        <p><input type="radio" id="problem35A" value="A" name="problem35" /> A.安排好的</p>
+        <p><input type="radio" id="problem35B" value="B" name="problem35" /> B.不受限制的</p>
+    </div>
+    <div id="problem36" class="EI">
+        <p>36: </p>
+        <p><input type="radio" id="problem36A" value="A" name="problem36" /> A.热情</p>
+        <p><input type="radio" id="problem36B" value="B" name="problem36" /> B.安静</p>
+    </div>
+    <div id="problem37" class="FT">
+        <p>37: </p>
+        <p><input type="radio" id="problem37A" value="A" name="problem37" /> A.温柔</p>
+        <p><input type="radio" id="problem37B" value="B" name="problem37" /> B.坚硬</p>
+    </div>
+    <div id="problem38" class="SN">
+        <p>38: </p>
+        <p><input type="radio" id="problem38A" value="A" name="problem38" /> A.陈述</p>
+        <p><input type="radio" id="problem38B" value="B" name="problem38" /> B.观念</p>
+    </div>
+    <div id="problem39" class="FT">
+        <p>39: </p>
+        <p><input type="radio" id="problem39A" value="A" name="problem39" /> A.慈悲心肠</p>
+        <p><input type="radio" id="problem39B" value="B" name="problem39" /> B.意志竖强</p>
+    </div>
+    <div id="problem40" class="SN">
+        <p>40: </p>
+        <p><input type="radio" id="problem40A" value="A" name="problem40" /> A.事实的</p>
+        <p><input type="radio" id="problem40B" value="B" name="problem40" /> B.理论的</p>
+    </div>
+    <div id="problem41" class="EI">
+        <p>41: </p>
+        <p><input type="radio" id="problem41A" value="A" name="problem41" /> A.很多朋友</p>
+        <p><input type="radio" id="problem41B" value="B" name="problem41" /> B.少许朋友</p>
+    </div>
+    <div id="problem42" class="JP">
+        <p>42: </p>
+        <p><input type="radio" id="problem42A" value="A" name="problem42" /> A.系统的</p>
+        <p><input type="radio" id="problem42B" value="B" name="problem42" /> B.自发的</p>
+    </div>
+    <div id="problem43" class="SN">
+        <p>43: </p>
+        <p><input type="radio" id="problem43A" value="A" name="problem43" /> A.确定</p>
+        <p><input type="radio" id="problem43B" value="B" name="problem43" /> B.推测</p>
+    </div>
+    <div id="problem44" class="FT">
+        <p>44: </p>
+        <p><input type="radio" id="problem44A" value="A" name="problem44" /> A.宽容</p>
+        <p><input type="radio" id="problem44B" value="B" name="problem44" /> B.坚定</p>
+    </div>
+    <div id="problem45" class="SN">
+        <p>45: </p>
+        <p><input type="radio" id="problem45A" value="A" name="problem45" /> A.必然性</p>
+        <p><input type="radio" id="problem45B" value="B" name="problem45" /> B.可能性</p>
+    </div>
+    <div id="problem46" class="FT">
+        <p>46: </p>
+        <p><input type="radio" id="problem46A" value="A" name="problem46" /> A.动之以情</p>
+        <p><input type="radio" id="problem46B" value="B" name="problem46" /> B.晓之以理</p>
+    </div>
+    <div id="problem47" class="EI">
+        <p>47: </p>
+        <p><input type="radio" id="problem47A" value="A" name="problem47" /> A.健谈</p>
+        <p><input type="radio" id="problem47B" value="B" name="problem47" /> B.缄默</p>
+    </div>
+    <div id="problem48" class="FT">
+        <p>48: </p>
+        <p><input type="radio" id="problem48A" value="A" name="problem48" /> A.温和</p>
+        <p><input type="radio" id="problem48B" value="B" name="problem48" /> B.力量</p>
+    </div>
+    <div id="problem49" class="SN">
+        <p>49: </p>
+        <p><input type="radio" id="problem49A" value="A" name="problem49" /> A.现实</p>
+        <p><input type="radio" id="problem49B" value="B" name="problem49" /> B.理想</p>
+    </div>
+    <div id="problem50" class="FT">
+        <p>50: </p>
+        <p><input type="radio" id="problem50A" value="A" name="problem50" /> A.好心的</p>
+        <p><input type="radio" id="problem50B" value="B" name="problem50" /> B.称职的</p>
+    </div>
+    <div id="problem51" class="SN">
+        <p>51: </p>
+        <p><input type="radio" id="problem51A" value="A" name="problem51" /> A.事实</p>
+        <p><input type="radio" id="problem51B" value="B" name="problem51" /> B.理论</p>
+    </div>
+    <div id="problem52" class="JP">
+        <p>52: </p>
+        <p><input type="radio" id="problem52A" value="A" name="problem52" /> A.系统</p>
+        <p><input type="radio" id="problem52B" value="B" name="problem52" /> B.随机</p>
+    </div>
+    <div id="problem53" class="SN">
+        <p>53: </p>
+        <p><input type="radio" id="problem53A" value="A" name="problem53" /> A.现实的</p>
+        <p><input type="radio" id="problem53B" value="B" name="problem53" /> B.想象的</p>
+    </div>
+    <div id="problem54" class="FT">
+        <p>54: </p>
+        <p><input type="radio" id="problem54A" value="A" name="problem54" /> A.易动情的</p>
+        <p><input type="radio" id="problem54B" value="B" name="problem54" /> B.客观的</p>
+    </div>
+    <div id="problem55" class="SN">
+        <p>55: </p>
+        <p><input type="radio" id="problem55A" value="A" name="problem55" /> A.建造</p>
+        <p><input type="radio" id="problem55B" value="B" name="problem55" /> B.发明</p>
+    </div>
+    <div id="problem56" class="FT">
+        <p>56: </p>
+        <p><input type="radio" id="problem56A" value="A" name="problem56" /> A.感情丰富的</p>
+        <p><input type="radio" id="problem56B" value="B" name="problem56" /> B.注重实际的</p>
+    </div>
+    <div id="problem57" class="JP">
+        <p>57: </p>
+        <p><input type="radio" id="problem57A" value="A" name="problem57" /> A.有序的</p>
+        <p><input type="radio" id="problem57B" value="B" name="problem57" /> B.随便的</p>
+    </div>
+    <div id="problem58" class="EI">
+        <p>58: </p>
+        <p><input type="radio" id="problem58A" value="A" name="problem58" /> A.开朗</p>
+        <p><input type="radio" id="problem58B" value="B" name="problem58" /> B.文静</p>
+    </div>
+    <div id="problem59" class="FT">
+        <p>59: </p>
+        <p><input type="radio" id="problem59A" value="A" name="problem59" /> A.认同</p>
+        <p><input type="radio" id="problem59B" value="B" name="problem59" /> B.分析</p>
+    </div>
+    <div id="problem60" class="SN">
+        <p>60: </p>
+        <p><input type="radio" id="problem60A" value="A" name="problem60" /> A.事实的</p>
+        <p><input type="radio" id="problem60B" value="B" name="problem60" /> B.想象的</p>
+    </div>
+    <div id="problem61" class="FT">
+        <p>61: </p>
+        <p><input type="radio" id="problem61A" value="A" name="problem61" /> A.祝福</p>
+        <p><input type="radio" id="problem61B" value="B" name="problem61" /> B.利益</p>
+    </div>
+    <div id="problem62" class="SN">
+        <p>62: </p>
+        <p><input type="radio" id="problem62A" value="A" name="problem62" /> A.详实</p>
+        <p><input type="radio" id="problem62B" value="B" name="problem62" /> B.概括</p>
+    </div>
+    <div id="problem63" class="JP">
+        <p>63: </p>
+        <p><input type="radio" id="problem63A" value="A" name="problem63" /> A.决定</p>
+        <p><input type="radio" id="problem63B" value="B" name="problem63" /> B.冲动</p>
+    </div>
+    <div id="problem64" class="SN">
+        <p>64: </p>
+        <p><input type="radio" id="problem64A" value="A" name="problem64" /> A.制作</p>
+        <p><input type="radio" id="problem64B" value="B" name="problem64" /> B.创造</p>
+    </div>
+    <div id="problem65" class="FT">
+        <p>65: </p>
+        <p><input type="radio" id="problem65A" value="A" name="problem65" /> A.热情</p>
+        <p><input type="radio" id="problem65B" value="B" name="problem65" /> B.客观</p>
+    </div>
+    <div id="problem66" class="SN">
+        <p>66: </p>
+        <p><input type="radio" id="problem66A" value="A" name="problem66" /> A.实用的</p>
+        <p><input type="radio" id="problem66B" value="B" name="problem66" /> B.迷人的</p>
+    </div>
+    <div id="problem67" class="FT">
+        <p>67: </p>
+        <p><input type="radio" id="problem67A" value="A" name="problem67" /> A.体谅的</p>
+        <p><input type="radio" id="problem67B" value="B" name="problem67" /> B.公正的</p>
+    </div>
+    <div id="problem68" class="EI">
+        <p>68: </p>
+        <p><input type="radio" id="problem68A" value="A" name="problem68" /> A.爱交际</p>
+        <p><input type="radio" id="problem68B" value="B" name="problem68" /> B.爱文静</p>
+    </div>
+    <div id="problem69" class="FT">
+        <p>69: </p>
+        <p><input type="radio" id="problem69A" value="A" name="problem69" /> A.敏感</p>
+        <p><input type="radio" id="problem69B" value="B" name="problem69" /> B.合理</p>
+    </div>
+    <div id="problem70" class="SN">
+        <p>70: </p>
+        <p><input type="radio" id="problem70A" value="A" name="problem70" /> A.制造</p>
+        <p><input type="radio" id="problem70B" value="B" name="problem70" /> B.设计</p>
+    </div>
+    <div id="problem71" class="FT">
+        <p>71: </p>
+        <p><input type="radio" id="problem71A" value="A" name="problem71" /> A.有同情心</p>
+        <p><input type="radio" id="problem71B" value="B" name="problem71" /> B.有逻辑头脑</p>
+    </div>
+    <div id="problem72" class="EI">
+        <p>72: </p>
+        <p><input type="radio" id="problem72A" value="A" name="problem72" /> A.公开的</p>
+        <p><input type="radio" id="problem72B" value="B" name="problem72" /> B.私人的</p>
+    </div>
+    <div id="problem73" class="FT">
+        <p>73: </p>
+        <p><input type="radio" id="problem73A" value="A" name="problem73" /> A.同情怜悯</p>
+        <p><input type="radio" id="problem73B" value="B" name="problem73" /> B.深谋远虑</p>
+    </div>
+    <h3>第三部分：请选择最接近地描述了你通常的思考和行为方式的选项</h3>
+    <div id="problem74" class="JP">
+        <p>74: 通常你更喜欢___?</p>
+        <p><input type="radio" id="problem74A" value="A" name="problem74" /> A.提前安排好业余活动</p>
+        <p><input type="radio" id="problem74B" value="B" name="problem74" /> B.即兴地做事情</p>
+    </div>
+    <div id="problem75" class="EI">
+        <p>75: 你觉得被许多人围着___?</p>
+        <p><input type="radio" id="problem75A" value="A" name="problem75" /> A.让你感到更有精神</p>
+        <p><input type="radio" id="problem75B" value="B" name="problem75" /> B.常让你精力衰竭</p>
+    </div>
+    <div id="problem76" class="JP">
+        <p>76: 多数情況下，你更喜欢___?</p>
+        <p><input type="radio" id="problem76A" value="A" name="problem76" /> A.按日程表办事</p>
+        <p><input type="radio" id="problem76B" value="B" name="problem76" /> B.顺其自然</p>
+    </div>
+    <div id="problem77" class="EI">
+        <p>77: 在聚会中，你___?</p>
+        <p><input type="radio" id="problem77A" value="A" name="problem77" /> A.总是玩得很开心</p>
+        <p><input type="radio" id="problem77B" value="B" name="problem77" /> B.有时觉得无趣</p>
+    </div>
+    <div id="problem78" class="FT">
+        <p>78: 作决定时，对于你来说更重要的是___?</p>
+        <p><input type="radio" id="problem78A" value="A" name="problem78" /> A.考虑人们的感受和观点</p>
+        <p><input type="radio" id="problem78B" value="B" name="problem78" /> B.权衡事实</p>
+    </div>
+    <div id="problem79" class="JP">
+        <p>79: 你喜欢___?</p>
+        <p><input type="radio" id="problem79A" value="A" name="problem79" /> A.事先很早就作好准备</p>
+        <p><input type="radio" id="problem79B" value="B" name="problem79" /> B.看清事念如何发展再作计划</p>
+    </div>
+    <div id="problem80" class="EI">
+        <p>80: 别人___了解你?</p>
+        <p><input type="radio" id="problem80A" value="A" name="problem80" /> A.很容易</p>
+        <p><input type="radio" id="problem80B" value="B" name="problem80" /> B.很难</p>
+    </div>
+    <div id="problem81" class="SN">
+        <p>81: 你喜欢的处事方式是___?</p>
+        <p><input type="radio" id="problem81A" value="A" name="problem81" /> A.坚持那些己经有效的方法</p>
+        <p><input type="radio" id="problem81B" value="B" name="problem81" /> B.分析哪些仍有错并挑战末解决的问题</p>
+    </div>
+    <div id="problem82" class="JP">
+        <p>82: 你觉得自己更偏向于是一个___?</p>
+        <p><input type="radio" id="problem82A" value="A" name="problem82" /> A.有组织性的人</p>
+        <p><input type="radio" id="problem82B" value="B" name="problem82" /> B.自发性的人</p>
+    </div>
+    <div id="problem83" class="EI">
+        <p>83: 你___?</p>
+        <p><input type="radio" id="problem83A" value="A" name="problem83" /> A.只要愿意，就能和几乎任何一个人谈个没完</p>
+        <p><input type="radio" id="problem83B" value="B" name="problem83" /> B.只同和自己有共同兴趣的人才能长时间的交谈</p>
+    </div>
+    <div id="problem84" class="FT">
+        <p>84: 你愿在___一个老板（老师）手下工作（学习）?</p>
+        <p><input type="radio" id="problem84A" value="A" name="problem84" /> A.脾气好，但前后不一致</p>
+        <p><input type="radio" id="problem84B" value="B" name="problem84" /> B.对人严厉，但有条理</p>
+    </div>
+    <div id="problem85" class="JP">
+        <p>85: 你更喜欢按照___做大多数事情?</p>
+        <p><input type="radio" id="problem85A" value="A" name="problem85" /> A.已定的日程表</p>
+        <p><input type="radio" id="problem85B" value="B" name="problem85" /> B.当天的感觉</p>
+    </div>
+    <div id="problem86" class="EI">
+        <p>86: 在聚会中，你___?</p>
+        <p><input type="radio" id="problem86A" value="A" name="problem86" /> A.自己聊得多</p>
+        <p><input type="radio" id="problem86B" value="B" name="problem86" /> B.听别人聊得多</p>
+    </div>
+    <div id="problem87" class="SN">
+        <p>87: 通常，你更喜欢上涉及___的课程?</p>
+        <p><input type="radio" id="problem87A" value="A" name="problem87" /> A.具体内容</p>
+        <p><input type="radio" id="problem87B" value="B" name="problem87" /> B.概念和原则</p>
+    </div>
+    <div id="problem88" class="JP">
+        <p>88: 当你开始了一项必须在一周内完成的大项目时，你会___?</p>
+        <p><input type="radio" id="problem88A" value="A" name="problem88" /> A.花时间列出所要做的事情及其先后次序</p>
+        <p><input type="radio" id="problem88B" value="B" name="problem88" /> B.直接开始</p>
+    </div>
+    <div id="problem89" class="EI">
+        <p>89: 在社交场合中，你通常觉得___?</p>
+        <p><input type="radio" id="problem89A" value="A" name="problem89" /> A.很容易同大多数人长时间谈话</p>
+        <p><input type="radio" id="problem89B" value="B" name="problem89" /> B.同某些人很难开展和维持长时间的谈话</p>
+    </div>
+    <div id="problem90" class="FT">
+        <p>90: 被称为___是更高的赞赏?</p>
+        <p><input type="radio" id="problem90A" value="A" name="problem90" /> A.富有同情心</p>
+        <p><input type="radio" id="problem90B" value="B" name="problem90" /> B.有竞争力</p>
+    </div>
+    <div id="problem91" class="JP">
+        <p>91: 你觉得按计划行事___?</p>
+        <p><input type="radio" id="problem91A" value="A" name="problem91" /> A.多数时候是有帮助的，适宜的</p>
+        <p><input type="radio" id="problem91B" value="B" name="problem91" /> B.有时必要，便令人不爽</p>
+    </div>
+    <div id="problem92" class="EI">
+        <p>92: 你通常___?</p>
+        <p><input type="radio" id="problem92A" value="A" name="problem92" /> A.同大家打成一片</p>
+        <p><input type="radio" id="problem92B" value="B" name="problem92" /> B.倾向于独处</p>
+    </div>
+    <div id="problem93" class="JP">
+        <p>93: 总的来说，要完成一项重大任务，你倾向于___?</p>
+        <p><input type="radio" id="problem93A" value="A" name="problem93" /> A.开始先确定每一个步骤</p>
+        <p><input type="radio" id="problem93B" value="B" name="problem93" /> B.边做边考虑必须完成的事</p>
+    </div>
+    <div><button id="submit" class="btn">查询 MBTI</button></div>
+    <div id="res"></div>
+    <script>
+        let btn = document.getElementById("submit");
+        let res = document.getElementById("res");
+        btn.onclick = () => {
+            let E = 0, I = 0, J = 0, P = 0, F = 0, T = 0, S = 0, N = 0;
+            for (let i = 1; i <= 93; i++) {
+                let pro = document.getElementById(`problem${i}`);
+                let iptA = document.getElementById(`problem${i}A`);
+                let iptB = document.getElementById(`problem${i}B`);
+                // console.log(iptA.checked);
+                if (!iptA.checked && !iptB.checked) {
+                    res.textContent = "请完整答题！";
+                    return;
+                }
+                if (iptA.checked) {
+                    if (pro.className == "EI") {
+                        E++;
+                    } else if (pro.className == "JP") {
+                        J++;
+                    } else if (pro.className == "FT") {
+                        F++;
+                    } else { // SN
+                        S++;
+                    }
+                } else {
+                    if (pro.className == "EI") {
+                        I++;
+                    } else if (pro.className == "JP") {
+                        P++;
+                    } else if (pro.className == "FT") {
+                        T++;
+                    } else { // SN
+                        N++;
+                    }
+                }
+            }
+            res.innerHTML = "您的人格是：<br/>";
+            if (E > I) {
+                res.innerHTML += "E";
+            } else {
+                res.innerHTML += "I";
+            }
+            if (S > N) {
+                res.innerHTML += "S";
+            } else {
+                res.innerHTML += "N";
+            }
+            if (F > T) {
+                res.innerHTML += "F";
+            } else {
+                res.innerHTML += "T";
+            }
+            if (J > P) {
+                res.innerHTML += "J";
+            } else {
+                res.innerHTML += "P";
+            }
+            res.innerHTML += `<br/>E/I：${E}/${I}<br/>`;
+            res.innerHTML += `S/N：${S}/${N}<br/>`;
+            res.innerHTML += `F/T：${F}/${T}<br/>`;
+            res.innerHTML += `J/P：${J}/${P}<br/>`;
+        }
+    </script>
+</body>
+
+</html>
