@@ -110,21 +110,3 @@ $$
 
 $$Ans=\sum_{d=1}^{min(n,m)}{\lfloor \frac{n}{d} \rfloor \lfloor \frac{m}{d} \rfloor f(d)}$$
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
