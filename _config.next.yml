@@ -46,6 +46,24 @@ scheme: Mist
 darkmode: false
 
 
+# Darkmode JS
+# For more information: https://github.com/rqh656418510/hexo-next-darkmode, https://github.com/sandoche/Darkmode.js
+darkmode_js:
+  enable: true
+  bottom: '64px' # default: '32px'
+  right: '32px' # default: '32px'
+  left: 'unset' # default: 'unset'
+  time: '0.5s' # default: '0.3s'
+  mixColor: 'transparent' # default: '#fff'
+  backgroundColor: 'transparent' # default: '#fff'
+  buttonColorDark: '#100f2c' # default: '#100f2c'
+  buttonColorLight: '#fff' # default: '#fff'
+  isActivated: false # default false
+  saveInCookies: true # default: true
+  label: '🌓' # default: ''
+  autoMatchOsTheme: true # default: true
+  libUrl: https://cdnjs.cloudflare.com/ajax/libs/Darkmode.js/1.5.7/darkmode-js.min.js
+
 # ---------------------------------------------------------------
 # Site Information Settings
 # ---------------------------------------------------------------
@@ -102,6 +120,8 @@ menu:
   categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
   editor: /editor/ || fa fa-pen-nib
+  ADarkRoom: /adarkroom/ || fa-solid fa-gamepad
+  MBTI: /mbti/ || fa-solid fa-circle-user
   #schedule: /schedule/ || fa fa-calendar
   # sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404.html || fa fa-heartbeat
