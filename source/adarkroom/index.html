@@ -38,7 +38,10 @@
 		if(!lang){
 			try {
 				lang = localStorage.lang;
-			} catch(e) {}
+			} catch(e) {
+				// modify by shwstone
+				lang = 'zh_cn';
+			}
 		}
 		// if a language different than english requested, load all translations
 		if(lang && lang != 'en'){
