@@ -1,4 +1,9 @@
-# 湖州（Hu Zhou）
+---
+title: 湖州（Hu Zhou）
+---
+
+---
+<!--more-->
 ## 地理位置
 
 <script type='text/javascript'
