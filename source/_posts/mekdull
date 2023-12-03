@@ -1,0 +1,20 @@
+# 湖州（Hu Zhou）
+## 地理位置
+
+<script type='text/javascript'
+          src='https://sdk.virtualearth.net/api/maps/mapcontrol?callback=GetMap&key=ApTOMYxkix5tL-whU_X-APwskxZlSGx_tM9iIQm-5kcyAalkN6LIVAFSfOqAdkK7' 
+            async defer></script>
+
+<script type='text/javascript'>
+let map;
+function GetMap() {
+    map = new Microsoft.Maps.Map('#myMap', {
+        center: new Microsoft.Maps.Location(32.2, 119.5),
+        mapTypeId: Microsoft.Maps.MapTypeId.aerial,
+        zoom: 11
+    });
+}
+</script>
+
+<div id="myMap" style="position:relative;width:800px;height:450px;"></div>
+
