@@ -26,7 +26,7 @@ title: 湖州（Hu Zhou）
 let map;
 function GetMap() {
     map = new Microsoft.Maps.Map('#myMap', {
-        center: new Microsoft.Maps.Location(30.46,119.61),
+        center: new Microsoft.Maps.Location(30.96,120.11),
         mapTypeId: Microsoft.Maps.MapTypeId.aerial,
         zoom: 11
     });
