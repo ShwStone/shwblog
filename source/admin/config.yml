@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: ShwStone/shwblog
+  name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
 
 site_url: https://shwst.one
