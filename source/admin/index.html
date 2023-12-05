@@ -28,10 +28,12 @@ layout: false
         //   h('div', {"className": "text"}, this.props.widgetFor('body'))
         // );
         // return this.props.entry;
-        console.log(this.props.widgetFor('body'));
+        // console.log(this.props.widgetFor('body'));
         // console.log
         // return window.markdownit().render(this.props.widgetFor('body').props.value);
-        return h("Markdown", {}, this.props.widgetFor('body').props.value);
+        return (
+          <Markdown>{this.props.widgetFor('body').props.value}</Markdown>
+        );
       }
     });
     CMS.registerPreviewTemplate("posts", PostPreview);
