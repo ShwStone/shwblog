@@ -12,7 +12,10 @@ layout: false
 <body>
   <!-- Include the script that builds the page and powers Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/13.0.2/markdown-it.min.js" integrity="sha512-ohlWmsCxOu0bph1om5eDL0jm/83eH09fvqLDhiEdiqfDeJbEvz4FSbeY0gLJSVJwQAp0laRhTXbUQG+ZUuifUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/13.0.2/markdown-it.min.js" integrity="sha512-ohlWmsCxOu0bph1om5eDL0jm/83eH09fvqLDhiEdiqfDeJbEvz4FSbeY0gLJSVJwQAp0laRhTXbUQG+ZUuifUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+  <script type="module">
+    import Markdown from 'https://esm.sh/react-markdown@9?bundle'
+  </script>
   <script>
     var PostPreview = createClass({
       render: function() {
@@ -26,7 +29,9 @@ layout: false
         // );
         // return this.props.entry;
         console.log(this.props.widgetFor('body'));
-        return window.markdownit().render(this.props.widgetFor('body').props.value);
+        // console.log
+        // return window.markdownit().render(this.props.widgetFor('body').props.value);
+        return h("Markdown", {}, this.props.widgetFor('body').props.value);
       }
     });
     CMS.registerPreviewTemplate("posts", PostPreview);
