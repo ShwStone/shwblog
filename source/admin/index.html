@@ -17,21 +17,10 @@ layout: false
     import Markdown from 'https://esm.sh/react-markdown@9?bundle'
     var PostPreview = createClass({
       render: function() {
-        // var entry = this.props.entry;
-        // var image = entry.getIn(['data', 'image']);
-        // var bg = this.props.getAsset(image);
-        // return h('div', {},
-        //   h('h1', {}, entry.getIn(['data', 'title'])),
-        //   h('img', {src: bg.toString()}),
-        //   h('div', {"className": "text"}, this.props.widgetFor('body'))
-        // );
-        // return this.props.entry;
-        // console.log(this.props.widgetFor('body'));
-        // console.log
-        // return window.markdownit().render(this.props.widgetFor('body').props.value);
         return Markdown({children: this.props.widgetFor('body').props.value});
       }
     });
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/core.min.js" integrity="sha512-Vj8DsxZwse5LgmhPlIXhSr/+mwl8OajbZVCr4mX/TcDjwU1ijG6A15cnyRXqZd2mUOQqRk4YbQdc7XhvedWqMg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     CMS.registerPreviewTemplate("posts", PostPreview);
   </script>
 </body>
