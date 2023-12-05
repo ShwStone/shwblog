@@ -26,7 +26,7 @@ collections:
     sort: "date:desc"
     create: true # Allow users to create new documents in this collection
     editor:
-      preview: false
+      preview: true
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false}
