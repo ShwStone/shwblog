@@ -31,9 +31,7 @@ layout: false
         // console.log(this.props.widgetFor('body'));
         // console.log
         // return window.markdownit().render(this.props.widgetFor('body').props.value);
-        return (
-          <Markdown>{this.props.widgetFor('body').props.value}</Markdown>
-        );
+        return Markdown({children: this.props.widgetFor('body').props.value});
       }
     });
     CMS.registerPreviewTemplate("posts", PostPreview);
