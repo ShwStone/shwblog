@@ -25,6 +25,7 @@ layout: false
         //   h('div', {"className": "text"}, this.props.widgetFor('body'))
         // );
         // return this.props.entry;
+        console.log(this.props.widgetFor('body'));
         return window.markdownit().render(this.props.widgetFor('body'));
       }
     });
