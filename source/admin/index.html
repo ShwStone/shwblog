@@ -12,6 +12,7 @@ layout: false
 <body>
   <!-- Include the script that builds the page and powers Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/13.0.2/markdown-it.min.js" integrity="sha512-ohlWmsCxOu0bph1om5eDL0jm/83eH09fvqLDhiEdiqfDeJbEvz4FSbeY0gLJSVJwQAp0laRhTXbUQG+ZUuifUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
     var PostPreview = createClass({
       render: function() {
@@ -23,7 +24,8 @@ layout: false
         //   h('img', {src: bg.toString()}),
         //   h('div', {"className": "text"}, this.props.widgetFor('body'))
         // );
-        return this.props.entry;
+        // return this.props.entry;
+        return window.markdownit().render(this.props.widgetFor('body'));
       }
     });
     CMS.registerPreviewTemplate("posts", PostPreview);
