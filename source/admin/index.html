@@ -14,7 +14,7 @@ layout: false
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 <!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/13.0.2/markdown-it.min.js" integrity="sha512-ohlWmsCxOu0bph1om5eDL0jm/83eH09fvqLDhiEdiqfDeJbEvz4FSbeY0gLJSVJwQAp0laRhTXbUQG+ZUuifUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
   <script type="module">
-    import ReactMarkdownMath from 'https://esm.sh/react-markdown-math@1.0.2?bundle'
+    import { ReactMarkdownMath } from 'https://esm.sh/react-markdown-math@1.0.2?bundle'
     var PostPreview = createClass({
       render: function() {
         return ReactMarkdownMath({markdown: this.props.widgetFor('body').props.value});
