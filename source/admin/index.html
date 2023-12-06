@@ -22,13 +22,8 @@ layout: false
     var PostPreview = createClass({
       render: function() {
         // return ReactMarkdownMath({markdown: this.props.widgetFor('body').props.value});
-        console.log(Markdown({
-          markdown: this.props.widgetFor('body').props.value, 
-          rehypePlugins: [rehypeMathjax],
-          remarkPlugins: [remarkMath]
-        }));
         return Markdown({
-          markdown: this.props.widgetFor('body').props.value, 
+          children: this.props.widgetFor('body').props.value, 
           rehypePlugins: [rehypeMathjax],
           remarkPlugins: [remarkMath]
         });
