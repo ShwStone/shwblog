@@ -56,6 +56,7 @@ collections:
         # Used in the UI, ie.: "New Post"
         label: "Admin-yml"
         file: "source/admin/config.yml"
+        extension: "markdown"
         editor:
           preview: false
         fields: # The fields each document in this collection have
@@ -74,6 +75,7 @@ collections:
         # Used in the UI, ie.: "New Post"
         label: "Site Config"
         file: "_config.yml"
+        extension: "markdown"
         editor:
           preview: false
         fields: # The fields each document in this collection have
@@ -83,6 +85,7 @@ collections:
         # Used in the UI, ie.: "New Post"
         label: "Next Config"
         file: "_config.next.yml"
+        extension: "markdown"
         editor:
           preview: false
         fields: # The fields each document in this collection have
