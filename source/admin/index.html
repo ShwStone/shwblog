@@ -18,13 +18,16 @@ layout: false
     import remarkMath from 'https://esm.sh/remark-math@6.0.0?bundle'
     import rehypeMathjax from 'https://esm.sh/rehype-mathjax@5.0.0?bundle'
     
+    import remarkGfm from 'https://esm.sh/remark-gfm@4.0.0?bundle'
+    import rehypeRaw from 'https://esm.sh/rehype-raw@7.0.0?bundle'
+    
     var PostPreview = createClass({
       render: function() {
         // return ReactMarkdownMath({markdown: this.props.widgetFor('body').props.value});
         return Markdown({
           children: this.props.widgetFor('body').props.value, 
-          rehypePlugins: [rehypeMathjax],
-          remarkPlugins: [remarkMath]
+          rehypePlugins: [rehypeMathjax, rehypeRaw],
+          remarkPlugins: [remarkMath, remarkGfm]
         });
       }
     });
