@@ -14,14 +14,14 @@ layout: false
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 <!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/13.0.2/markdown-it.min.js" integrity="sha512-ohlWmsCxOu0bph1om5eDL0jm/83eH09fvqLDhiEdiqfDeJbEvz4FSbeY0gLJSVJwQAp0laRhTXbUQG+ZUuifUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
   <script type="module">
-    import Markdown from 'https://esm.sh/react-markdown@9?bundle'
+    import Markdown from 'https://esm.sh/react-markdown-math@1.0.2?bundle'
     var PostPreview = createClass({
       render: function() {
-        return Markdown({children: this.props.widgetFor('body').props.value});
+        return ReactMarkdownMath({this.props.widgetFor('body').props.value});
       }
     });
     CMS.registerPreviewTemplate("posts", PostPreview);
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/core.min.js" integrity="sha512-Vj8DsxZwse5LgmhPlIXhSr/+mwl8OajbZVCr4mX/TcDjwU1ijG6A15cnyRXqZd2mUOQqRk4YbQdc7XhvedWqMg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/core.min.js" integrity="sha512-Vj8DsxZwse5LgmhPlIXhSr/+mwl8OajbZVCr4mX/TcDjwU1ijG6A15cnyRXqZd2mUOQqRk4YbQdc7XhvedWqMg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 </body>
 </html>
