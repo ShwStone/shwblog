@@ -23,7 +23,7 @@ collections:
     # Used in the UI, ie.: "New Post"
     label: "Post"
     folder: "source/_posts" # The path to the folder where the documents are stored
-    sort: "date:desc"
+    sort: "date"
     create: true # Allow users to create new documents in this collection
     editor:
       preview: true
@@ -35,3 +35,60 @@ collections:
       - {label: "Body", name: "body", widget: "markdown", required: false, modes: ["raw"]}
       - {label: "Comments", name: "comments", widget: "boolean", default: true, required: false}
       - {label: "Sticky", name: "sticky", widget: "number", value_type: "int", default: 2, required: false}
+      
+  - name: "about"
+    # Used in the UI, ie.: "New Post"
+    label: "About"
+    file: "source/about/index.md" # The path to the folder where the documents are stored
+    editor:
+      preview: true
+    fields: # The fields each document in this collection have
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false, modes: ["raw"]}
+      - {label: "Comments", name: "comments", widget: "boolean", default: true, required: false}
+
+  - name: "admin-yml"
+    # Used in the UI, ie.: "New Post"
+    label: "Admin-yml"
+    file: "source/admin/config.yml"
+    editor:
+      preview: false
+    fields: # The fields each document in this collection have
+      - {label: "Body", name: "body", widget: "text"}
+
+  - name: "admin-html"
+    # Used in the UI, ie.: "New Post"
+    label: "Admin-html"
+    file: "source/admin/index.html"
+    editor:
+      preview: false
+    fields: # The fields each document in this collection have
+      - {label: "Body", name: "body", widget: "text"}
+
+  - name: "site-config"
+    # Used in the UI, ie.: "New Post"
+    label: "Site Config"
+    file: "_config.yml"
+    editor:
+      preview: false
+    fields: # The fields each document in this collection have
+      - {label: "Body", name: "body", widget: "text"}
+
+  - name: "next-config"
+    # Used in the UI, ie.: "New Post"
+    label: "Next Config"
+    file: "_config.next.yml"
+    editor:
+      preview: false
+    fields: # The fields each document in this collection have
+      - {label: "Body", name: "body", widget: "text"}
+
+  - name: "404"
+    # Used in the UI, ie.: "New Post"
+    label: "404 Page"
+    file: "source/404.md"
+    editor:
+      preview: true
+    fields: # The fields each document in this collection have
+      - {label: "Body", name: "body", widget: "markdown", required: false, modes: ["raw"]}
