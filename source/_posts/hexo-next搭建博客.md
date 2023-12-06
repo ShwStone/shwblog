@@ -5,7 +5,7 @@ tags: 博客
 categories:
   - hexo
 comments: true
-sticky: 3
+sticky: 2
 ---
 
 前情提要：不花一分钱搭建一个**带有后台**的个人 Blog 。
