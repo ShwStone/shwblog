@@ -1,12 +1,11 @@
 ---
 title: note
 date: 2023-08-16 16:21:39
-updateDate: 2023-08-16 16:21:39
 tags:
 categories:
 - 信奥
 comments: false
-top: 0
+sticky: 0
 ---
 
 ## 碎碎念

@@ -1,9 +1,8 @@
 ---
 title: Dirichlet 前缀和
 comments: true
-top: 2
+sticky: 2
 date: 2022-08-08 15:35:50
-updateDate: 2022-08-08 15:35:50
 tags:
 - 算法
 - 题解

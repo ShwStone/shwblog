@@ -1,13 +1,12 @@
 ---
 title: CF2B-The-least-round-way-题解
 date: 2023-07-08 13:02:01
-updateDate: 2023-07-08 13:02:01
 tags:
 categories:
 - 信奥
 - 题解
 comments: true
-top: 2
+sticky: 2
 ---
 原题链接：[Link](https://xoj.red/problem/5216)
 

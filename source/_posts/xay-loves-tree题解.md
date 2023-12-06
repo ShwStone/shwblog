@@ -1,13 +1,12 @@
 ---
 title: xay-loves-tree题解
 date: 2023-10-04 16:23:33
-updateDate: 2023-10-04 16:23:33
 tags:
 categories:
 - 信奥
 - 题解
 comments: true
-top: 2
+sticky: 2
 ---
 
 ---

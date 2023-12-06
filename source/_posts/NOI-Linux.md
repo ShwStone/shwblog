@@ -1,9 +1,8 @@
 ---
 title: NOI-Linux
 comments: true
-top: 2
+sticky: 2
 date: 2023-04-08 09:53:09
-updateDate: 2023-04-08 09:53:09
 tags:
 categories:
 ---

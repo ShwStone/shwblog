@@ -1,12 +1,11 @@
 ---
 title: 编译指令-Linux
 date: 2022-07-13 16:25:07
-updateDate: 2022-07-13 16:25:07
 tags:
 categories:
 - 信奥
 comments: true
-top: 2
+sticky: 2
 ---
 
 ---

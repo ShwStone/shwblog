@@ -1,13 +1,12 @@
 ---
 title: bitset优化Floyd传递闭包
 date: 2022-07-16 15:51:40
-updateDate: 2022-07-16 15:51:40
 tags: 
 categories:
 - 信奥
 - 图论
 comments: true
-top: 2
+sticky: 2
 ---
 ## 加速64倍
 

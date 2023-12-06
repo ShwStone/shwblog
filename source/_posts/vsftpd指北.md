@@ -1,9 +1,8 @@
 ---
 title: vsftpd指北
 comments: true
-top: 2
+sticky: 2
 date: 2022-10-04 05:49:31
-updateDate: 2022-10-04 05:49:31
 tags:
 - vsftpd 
 categories: 

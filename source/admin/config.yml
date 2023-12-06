@@ -30,9 +30,8 @@ collections:
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false}
-      - {label: "Update Date", name: "updateDate", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false}
       - {label: "Tags", name: "tags", widget: "list", required: false}
       - {label: "Categories", name: "categories", widget: "list", required: false}
       - {label: "Body", name: "body", widget: "markdown", required: false, modes: ["raw"]}
       - {label: "Comments", name: "comments", widget: "boolean", default: true, required: false}
-      - {label: "Top", name: "top", widget: "number", value_type: "int", default: 2, required: false}
+      - {label: "Sticky", name: "sticky", widget: "number", value_type: "int", default: 2, required: false}

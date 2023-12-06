@@ -1,12 +1,11 @@
 ---
 title: hexo+next搭建博客
 date: 2022-07-26 08:49:54
-updateDate: 2022-10-10 08:49:54
 tags: 博客
 categories:
   - hexo
 comments: true
-top: 3
+sticky: 3
 ---
 
 前情提要：不花一分钱搭建一个**带有后台**的个人 Blog 。
@@ -869,7 +868,6 @@ collections:
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false}
-      - {label: "Update Date", name: "updateDate", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", required: false}
       - {label: "Tags", name: "tags", widget: "list", required: false}
       - {label: "Categories", name: "categories", widget: "list", required: false}
       - {label: "Body", name: "body", widget: "markdown", required: false}

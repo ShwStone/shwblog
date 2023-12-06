@@ -1,13 +1,12 @@
 ---
 title: YY的GCD-题解
 date: 2022-07-13 16:22:55
-updateDate: 2022-07-13 16:22:55
 tags:
 categories:
 - 信奥
 - 题解
 comments: true
-top: 2
+sticky: 2
 ---
 
 题目传送门：[Link](https://www.luogu.com.cn/problem/P2257)
