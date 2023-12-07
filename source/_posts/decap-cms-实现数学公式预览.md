@@ -30,12 +30,15 @@ decap-cms 免费，但是后端着实有些简陋。
     
     var PostPreview = createClass({
       render: function() {
-        // return ReactMarkdownMath({markdown: this.props.widgetFor('body').props.value});
-        return Markdown({
-          children: this.props.widgetFor('body').props.value, 
-          rehypePlugins: [rehypeMathjax, rehypeRaw],
-          remarkPlugins: [remarkMath, remarkGfm]
-        });
+        if (this.props.widgetFor('body') != null) { // 修复新建文章出错
+          return Markdown({
+            children: this.props.widgetFor('body').props.value, 
+            rehypePlugins: [rehypeMathjax, rehypeRaw],
+            remarkPlugins: [remarkMath, remarkGfm]
+          });
+        } else {
+          return '';
+        }
       }
     });
     CMS.registerPreviewTemplate("posts", PostPreview); // posts是你的 collections 的 name 字段
