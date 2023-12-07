@@ -23,12 +23,14 @@ layout: false
     
     var PostPreview = createClass({
       render: function() {
-        try { return Markdown({
-          children: this.props.widgetFor('body').props.value, 
-          rehypePlugins: [rehypeMathjax, rehypeRaw],
-          remarkPlugins: [remarkMath, remarkGfm]
-        }); } catch(e) {
-          return `<div></div>';
+        if (this.props.widgetFor('body').props.value) {
+          return Markdown({
+            children: this.props.widgetFor('body').props.value, 
+            rehypePlugins: [rehypeMathjax, rehypeRaw],
+            remarkPlugins: [remarkMath, remarkGfm]
+          });
+        } else {
+          return '';
         }
       }
     });
