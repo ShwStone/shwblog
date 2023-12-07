@@ -23,6 +23,7 @@ layout: false
     
     var PostPreview = createClass({
       render: function() {
+        console.log(this.props.widgetFor('body'));
         if (this.props.widgetFor('body').props.value) {
           return Markdown({
             children: this.props.widgetFor('body').props.value, 
