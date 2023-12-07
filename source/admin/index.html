@@ -23,16 +23,13 @@ layout: false
     
     var PostPreview = createClass({
       render: function() {
-        const markdown = this.props.widgetFor('body').props.value;
-        if (!markdown) {
-          markdown = 'empty';
-        }
-        // return ReactMarkdownMath({markdown: this.props.widgetFor('body').props.value});
-        return Markdown({
-          children: markdown, 
+        try { return Markdown({
+          children: this.props.widgetFor('body').props.value, 
           rehypePlugins: [rehypeMathjax, rehypeRaw],
           remarkPlugins: [remarkMath, remarkGfm]
-        });
+        }); } catch(e) {
+          return `<div></div>';
+        }
       }
     });
     CMS.registerPreviewTemplate("posts", PostPreview);
