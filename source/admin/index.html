@@ -23,8 +23,7 @@ layout: false
     
     var PostPreview = createClass({
       render: function() {
-        console.log(this.props.widgetFor('body'));
-        if (this.props.widgetFor('body').props.value) {
+        if (this.props.widgetFor('body') != null) {
           return Markdown({
             children: this.props.widgetFor('body').props.value, 
             rehypePlugins: [rehypeMathjax, rehypeRaw],
