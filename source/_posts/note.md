@@ -1,13 +1,14 @@
 ---
-title: note
-date: 2023-08-16 16:21:39
-tags:
+abbrlink: ''
 categories:
 - 信奥
 comments: false
+date: '2023-08-16T16:21:39+08:00'
 sticky: 0
+tags: []
+title: note
+updated: '2023-12-10T15:49:40.954+08:00'
 ---
-
 ## 碎碎念
 
 - 感觉和图论有关的时候先考虑匈牙利再考虑网络流
@@ -20,3 +21,4 @@ sticky: 0
 - ISAP 考虑清楚 dep 如何初始化以及更改。
 - ISAP 注意边界条件 `u == t`
 - `ex_gcd` 其实没有必要写返回值。
+- 内存太多怎么办？使用 `mysql`。
