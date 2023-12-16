@@ -88,3 +88,10 @@ code_dir: downloads/code
 default_category: uncategorized
 post_asset_folder: false
 description: 水出天际就叫水哥。
+
+lazyload:
+  enable: true
+  onlypost: false # optional
+  loadingImg: # optional eg ./images/loading.gif
+  isSPA: false # optional
+  preloadRatio: 3 # optional, default is 1
