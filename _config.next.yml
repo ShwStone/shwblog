@@ -29,7 +29,7 @@ custom_file_path:
   #bodyEnd: source/_data/body-end.njk
   #variable: source/_data/variables.styl
   #mixin: source/_data/mixins.styl
-  #style: source/_data/styles.styl
+  style: source/_data/styles.styl
 
 
 # ---------------------------------------------------------------
@@ -38,9 +38,9 @@ custom_file_path:
 
 # Schemes
 # scheme: Muse
-scheme: Mist
-#scheme: Pisces
-#scheme: Gemini
+# scheme: Mist
+# scheme: Pisces
+scheme: Gemini
 
 # Dark Mode
 darkmode: false
@@ -85,7 +85,7 @@ creative_commons:
   license: by-nc-sa
   # Available values: big | small
   size: small
-  sidebar: false
+  sidebar: true
   post: false
   # You can set a language value if you prefer a translated version of CC license, e.g. deed.zh
   # CC licenses are available in 39 languages, you can find the specific and correct abbreviation you need on https://creativecommons.org
@@ -119,9 +119,12 @@ menu:
   tags: /tags/ || fa fa-tags
   categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
-  editor: /editor/ || fa fa-pen-nib
-  ADarkRoom: /adarkroom/ || fa-solid fa-gamepad
-  MBTI: /mbti/ || fa-solid fa-circle-user
+  widgets: 
+    default: /widgets/ || fa-solid fa-toolbox
+    editor: https://shwst.one/editor/ || fa fa-pen-nib
+    TodayInHistory: https://shwst.one/today-in-history/ || fa-solid fa-book
+    ADarkRoom: https://shwst.one/adarkroom/ || fa-solid fa-gamepad
+    MBTI: https://shwst.one/mbti/ || fa-solid fa-circle-user
   #schedule: /schedule/ || fa fa-calendar
   # sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404.html || fa fa-heartbeat
@@ -129,7 +132,7 @@ menu:
 # Enable / Disable menu icons / item badges.
 menu_settings:
   icons: true
-  badges: false
+  badges: true
 
 
 # ---------------------------------------------------------------
@@ -140,7 +143,7 @@ menu_settings:
 sidebar:
   # Sidebar Position.
   position: left
-  #position: right
+  # position: right
 
   # Manual define the sidebar width. If commented, will be default for:
   # Muse | Mist: 320
@@ -162,14 +165,14 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: /images/head.jpg
+  url: https://images.shwst.one/head.jpg
   # If true, the avatar will be dispalyed in circle.
   rounded: true
   # If true, the avatar will be rotated with the cursor.
   rotated: true
 
 # Posts / Categories / Tags in sidebar.
-site_state: true
+site_state: false
 
 # Social Links
 # Usage: `Key: permalink || icon`
@@ -177,7 +180,7 @@ site_state: true
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
   GitHub: https://github.com/ShwStone || fab fa-github
-  E-Mail: HaowenShi@outlook.com || fa fa-envelope
+  #E-Mail: HaowenShi@outlook.com || fa fa-envelope
   #Weibo: https://weibo.com/yourname || fab fa-weibo
   #Google: https://plus.google.com/yourname || fab fa-google
   #Twitter: https://twitter.com/yourname || fab fa-twitter
@@ -200,14 +203,12 @@ links_settings:
   layout: block
 
 links:
-  CmsMartin: https://www.luogu.com.cn/user/461426
-  CmsBlog: http://cmsblog.top/
-  juruo999: https://www.luogu.com.cn/user/371818
-  juruo999's Blog: https://codewasp942.github.io/
-  陈玉彬: https://www.luogu.com.cn/user/333119
-  CybBlog: https://www.luogu.com.cn/blog/cyb1010/
-  _Fontainebleau_: https://www.luogu.com.cn/user/181775
-  LJC001151's Blog: https://www.luogu.com.cn/blog/181775/
+  CmsMartin: http://cmsblog.top/
+  juruo999: https://codewasp942.github.io/
+  陈玉彬: https://www.luogu.com.cn/blog/cyb1010/
+  _Fontainebleau_: https://www.luogu.com.cn/blog/181775/
+  Mekdull: https://mekdull.netlify.app/
+  PandaGhost: https://panda-ghost.github.io/
 
 # Table of Contents in the Sidebar
 # Front-matter variable (nonsupport wrap expand_all).
@@ -233,7 +234,7 @@ language_switcher: false
 
 footer:
   # Specify the year when the site was setup. If not defined, current year will be used.
-  #since: 2021
+  since: 2021
 
   # Icon between year and copyright info.
   icon:
@@ -347,8 +348,8 @@ tagcloud:
   orderby: name # Order of tags
   order: 1 # Sort order
 
-netlify_cms:
-  config_file: netlify.yaml
+# netlify_cms:
+#  config_file: netlify.yaml
 
 # Google Calendar
 # Share your recent schedule to others via calendar page.
@@ -414,9 +415,9 @@ codeblock:
 back2top:
   enable: true
   # Back to top in sidebar.
-  sidebar: false
+  sidebar: true
   # Scroll percent label in b2t button.
-  scrollpercent: false
+  scrollpercent: true
 
 # Reading progress bar
 reading_progress:
@@ -440,9 +441,9 @@ bookmark:
 
 # `Follow me on GitHub` banner in the top-right corner.
 github_banner:
-  enable: true
-  permalink: https://github.com/ShwStone/shwblog
-  title: Fork me on GitHub
+  enable: false
+  permalink: https://github.com/ShwStone/
+  title: Follow me on GitHub
 
 # ---------------------------------------------------------------
 # Font Settings
@@ -957,7 +958,7 @@ tidio:
 # ---------------------------------------------------------------
 
 vendors:
-  mathjax: https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.js
+  mathjax: https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.min.js
   # The CDN provider of NexT internal scripts.
   # Available values: local | jsdelivr | unpkg | cdnjs | custom
   # Warning: If you are using the latest master branch of NexT, please set `internal: local`

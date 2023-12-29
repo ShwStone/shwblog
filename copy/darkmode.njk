@@ -1,0 +1,53 @@
+<script src="{%if config.darkmode_js.libUrl %}{{ config.darkmode_js.libUrl }}{%else%}https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js{%endif%}"></script>
+
+<script>
+var options = {
+  bottom: '{{ config.darkmode_js.bottom }}',
+  right: '{{ config.darkmode_js.right }}',
+  left: '{{ config.darkmode_js.left }}',
+  time: '{{ config.darkmode_js.time }}',
+  mixColor: '{{ config.darkmode_js.mixColor }}',
+  backgroundColor: '{{ config.darkmode_js.backgroundColor }}',
+  buttonColorDark: '{{ config.darkmode_js.buttonColorDark }}',
+  buttonColorLight: '{{ config.darkmode_js.buttonColorLight }}',
+  saveInCookies: {{ config.darkmode_js.saveInCookies }},
+  label: '{{ config.darkmode_js.label }}',
+  autoMatchOsTheme: {{ config.darkmode_js.autoMatchOsTheme }}
+}
+let darkmode = new Darkmode(options);
+darkmode.showWidget();
+
+window.onload = () => {
+setTimeout(() => {
+  let giscus_shw = document.getElementsByClassName('giscus-frame')[0]
+  if (darkmode.isActivated()) {
+    giscus_shw.src = giscus_shw.src.replace('light', 'dark');
+  }
+}, 1000)
+}
+
+darkmode.button.addEventListener('click', () => {
+  setTimeout(() => {  
+    let giscus_shw = document.getElementsByClassName('giscus-frame')[0]
+    if (darkmode.isActivated()) {
+      giscus_shw.src = giscus_shw.src.replace('light', 'dark');
+    } else {
+      giscus_shw.src = giscus_shw.src.replace('dark', 'light');
+    }
+    console.log(giscus_shw)
+  }, 10)
+});
+window.darkmode = darkmode;
+
+{%- if config.darkmode_js.isActivated and not config.darkmode_js.saveInCookies and not config.darkmode_js.autoMatchOsTheme %}
+if (window.darkmode && !window.darkmode.isActivated()) {
+  window.darkmode.toggle();
+  var toggleButtons = document.getElementsByClassName("darkmode-toggle");
+  if (toggleButtons && toggleButtons.length > 0) {
+    for (i = 0; i < toggleButtons.length; i++) {
+      toggleButtons[i].classList.add("darkmode-toggle--white");
+    }
+  }
+}
+{%- endif %}
+</script>

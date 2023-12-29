@@ -102,7 +102,7 @@ hexo clean && hexo s -p 1234
 
 无论在哪个端口，它看上去应该像这样：
 
-![](/images/helloworld.png)
+![](https://images.shwst.one/helloworld.png)
 
 #### 配置
 
@@ -437,7 +437,7 @@ scheme: Muse
 ```yaml
   avatar:
     # Replace the default image and set the url here.
-    url: /images/head.jpg
+    url: https://images.shwst.one/head.jpg
     # If true, the avatar will be dispalyed in circle.
     rounded: true
     # If true, the avatar will be rotated with the cursor.
@@ -500,10 +500,10 @@ scheme: Muse
     comment: "如果阅读本篇文章需要付费，你愿意为此支付1块钱吗？"
 
   reward:
-    wechatpay: /images/weixin.jpg
-    #alipay: /images/alipay.png
-    #paypal: /images/paypal.png
-    #bitcoin: /images/bitcoin.png
+    wechatpay: https://images.shwst.one/weixin.jpg
+    #alipay: https://images.shwst.one/alipay.png
+    #paypal: https://images.shwst.one/paypal.png
+    #bitcoin: https://images.shwst.one/bitcoin.png
 ```
 
 在 `reward` 中设置你的收款码。方法同头像。
@@ -844,7 +844,7 @@ backend:
 
 site_url: https://shwst.one
 display_url: https://shwst.one
-# logo_url: https://shwst.one/images/
+# logo_url: https://images.shwst.one/
 locale: 'cn'
 
 # This line should *not* be indented
