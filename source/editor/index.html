@@ -1,0 +1,22 @@
+---
+comments: false
+title: Markdown 在线编辑
+---
+
+<script src="https://cdn.luogu.com.cn/markdown-palettes/markdown-palettes.min.js"></script>
+<link rel="stylesheet" href="https://cdn.luogu.com.cn/markdown-palettes/markdown-palettes.css">
+<div>
+	内容保存在 LocalStorage 中，清除浏览数据可能会被删除。
+</div>
+<div>
+	Powered by Markdown*Palettes
+</div>
+<div style="height: 800px">
+	<div id="editor"></div>
+</div>
+
+<script>
+	let editor = new MarkdownPalettes('#editor');
+	editor.content = localStorage.getItem("content");;
+	window.addEventListener('beforeunload', (e) => localStorage.setItem("content", editor.content));
+</script>

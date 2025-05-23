@@ -1,0 +1,95 @@
+future: true
+filter_optimize:
+  enable: true
+  versioning: false
+  css:
+    minify: true
+    excludes: null
+    delivery:
+      - "@fortawesome/fontawesome-free"
+      - fonts.googleapis.com
+    inlines:
+      - css/main.css
+  js:
+    minify: true
+    excludes: null
+    remove_comments: false
+  html:
+    minify: true
+    excludes: null
+  priority: 12
+permalink_defaults: null
+index_generator:
+  path: ""
+  per_page: 10
+  order_by: -date
+  pagination_dir: page
+deploy: null
+include: null
+titlecase: false
+date_format: YYYY-MM-DD
+filename_case: 0
+pagination_dir: page
+tag_dir: tags
+default_layout: post
+time_format: HH:mm:ss
+theme: next
+source_dir: source
+prismjs:
+  enable: false
+  preprocess: true
+keywords: shwstone, ShwStone, note
+author: ShwStone
+new_post_name: :title.md
+permalink: :year/:month/:day/:title/
+category_dir: categories
+i18n_dir: :lang
+relative_link: false
+pretty_urls:
+  trailing_index: true
+  trailing_html: true
+external_link:
+  enable: true
+  field: site
+  exclude: ""
+markdown:
+  plugins:
+    - hexo-renderer-pandoc
+url: https://m.shwstone.cn
+archive_dir: archives
+per_page: 0
+ignore: null
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace: ""
+  wrap: true
+  hljs: false
+sitemap:
+  path: sitemap.xml
+skip_render: 
+  - baidu_verify_codeva-Y7ZRBR2Awz.html
+public_dir: public
+tag_map: null
+subtitle: ShwStone 的学习笔记
+title: ShwNote
+language: zh-CN
+updated_option: mtime
+meta_generator: true
+timezone: Asia/Shanghai
+exclude: null
+since: 2022
+render_drafts: false
+category_map: null
+code_dir: downloads/code
+default_category: uncategorized
+post_asset_folder: false
+description: 水出天际就叫水哥
+
+lazyload:
+  enable: true
+  onlypost: true # optional
+  loadingImg: # optional eg ./images/loading.gif
+  isSPA: false # optional
+  preloadRatio: 3 # optional, default is 1
