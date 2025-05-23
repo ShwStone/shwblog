@@ -722,10 +722,10 @@ hexo-renderer-ejs@^2.0.0:
   dependencies:
     ejs "^3.1.6"
 
-hexo-renderer-pandoc@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.npmmirror.com/hexo-renderer-pandoc/-/hexo-renderer-pandoc-0.4.0.tgz#59000f65a4f75315a8e1d696c3b6d5fe84156191"
-  integrity sha512-e913A2EZbhwbIfg+QvYUalEPHtK5qs9Rqj3ZrsQ3cYTbbiETMWhUQ7bzSlgUeh639eL0UDuBmv2vrEqj5RBchg==
+hexo-renderer-pandoc@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/hexo-renderer-pandoc/-/hexo-renderer-pandoc-0.5.0.tgz#9bc44a4203244e9ec24ff4e39fafd283537fe7f9"
+  integrity sha512-DpofabKugXwbGZdYYoVTXq8QDUd2ZSWwcqJKp4OZfLtu8sflETEb8R+Yyx1dT7S3SXlz++GV4/kwCnAhAvNVrg==
 
 hexo-renderer-stylus@^3.0.0:
   version "3.0.1"
