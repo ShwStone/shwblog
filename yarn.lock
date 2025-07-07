@@ -756,10 +756,10 @@ hexo-sliding-spoiler@^1.2.1:
   dependencies:
     hexo-fs "^2.0.0"
 
-hexo-theme-next@^8.23.0:
-  version "8.23.0"
-  resolved "https://registry.npmmirror.com/hexo-theme-next/-/hexo-theme-next-8.23.0.tgz#6480a0a57683de0db3d2711e763c1a2e20207309"
-  integrity sha512-hHRuGRCTF1HyIjvucK3Ylxr2qYB2/bFXdD/IWyPtxcVvkLgn3jcwBq4Zw/ksd0qtKNnLnjrlwWSH9Dyy9Li5mA==
+hexo-theme-next@^8.23.2:
+  version "8.23.2"
+  resolved "https://registry.yarnpkg.com/hexo-theme-next/-/hexo-theme-next-8.23.2.tgz#cbe22ad0e2415ba6639bfe03648c937fda5dad44"
+  integrity sha512-PXkWE8BLpD3ON0Y15epb/Vxm2lwVqH9xwDTdYAI7nbbi0tJql6BtcR6WEK2/UOTmZ/IIMKUVMAzLPM+cbeU2VQ==
 
 hexo-util@2.5.0:
   version "2.5.0"
