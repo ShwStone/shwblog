@@ -55,6 +55,9 @@ external_link:
 markdown:
   plugins:
     - hexo-renderer-pandoc
+pandoc:
+  args:
+    --mathjax
 url: https://m.shwstone.cn
 archive_dir: archives
 per_page: 0
